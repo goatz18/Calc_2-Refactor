@@ -1,4 +1,6 @@
 """Calculation history Class"""
+# pylint: disable=missing-function-docstring
+# pylint: disable=missing-class-docstring
 
 
 class Calculations:

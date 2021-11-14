@@ -6,7 +6,7 @@
 [![Build Status](https://app.travis-ci.com/goatz18/calc2_2.svg?branch=main)](https://app.travis-ci.com/goatz18/calc2_2)
 
 
-###Quick reference stuff:
+### Quick reference stuff:
 
 Run Pip Install pip install -r requirements.txt
 

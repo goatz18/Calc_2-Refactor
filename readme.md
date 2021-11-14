@@ -3,8 +3,7 @@
 
 ### Travis Build Status
 
-[![Build Status](https://app.travis-ci.com/goatz18/calc2_2.svg?branch=main)](https://app.travis-ci.com/goatz18/calc2_2)
-
+[![Build Status](https://app.travis-ci.com/goatz18/Calc_2-Refactor.svg?branch=main)](https://app.travis-ci.com/goatz18/Calc_2-Refactor)
 
 ### Quick reference stuff:
 

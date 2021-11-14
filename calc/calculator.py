@@ -31,7 +31,7 @@ class Calculator:
 
     @staticmethod
     def divide_numbers(*args):
-        """ multiplication number from result"""
+        """ division number from result"""
         calculation = Division(args)
         Calculations.add_calculation(calculation)
         return calculation.get_result()

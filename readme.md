@@ -4,7 +4,6 @@
 ### Travis Build Status
 
 [![Build Status](https://app.travis-ci.com/goatz18/Calc_2-Refactor.svg?branch=main)](https://app.travis-ci.com/goatz18/Calc_2-Refactor)
-
 ###Quick reference stuff:
 
 Run Pip Install pip install -r requirements.txt

@@ -9,4 +9,4 @@ def test_calculation_subtraction():
     division = Division(mynumbers)
     # Act
     # Assert
-    assert division.get_result() == 5.0
+    assert division.get_result() == 0.2

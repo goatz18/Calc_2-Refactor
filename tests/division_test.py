@@ -1,5 +1,7 @@
 """Testing Division"""
 from calc.calculations.division import Division
+import pandas as pd
+data = pd.read_csv("../fileutilities/division.csv")
 
 
 def test_calculation_subtraction():

@@ -1,5 +1,7 @@
 """Testing Subtraction"""
 from calc.calculations.subtraction import Subtraction
+import pandas as pd
+data = pd.read_csv("../fileutilities/subtraction.csv")
 
 
 def test_calculation_subtraction():

@@ -1,7 +1,5 @@
 """Testing Addition"""
 from calc.calculations.addition import Addition
-import pandas as pd
-data = pd.read_csv("../fileutilities/addition.csv")
 
 
 def test_calculation_addition():

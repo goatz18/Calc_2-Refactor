@@ -33,3 +33,9 @@ class Calculations:
     def add_calculation(calculation):
         """ get a specific calculation from history"""
         return Calculations.history.append(calculation)
+
+    @staticmethod
+    def get_last_calculation_result_value():
+        """get last calculation"""
+        calculation = Calculations.get_last_calculation()
+        return calculation.get_result()

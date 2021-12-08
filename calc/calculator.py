@@ -8,6 +8,12 @@ from calc.history.calculations import Calculations
 
 class Calculator:
     """ This is the Calculator class"""
+
+    @staticmethod
+    def get_last_calc_value():
+        """Gets the last calculated value"""
+        return Calculations.get_last_calculation_result_value()
+
     @staticmethod
     def add_numbers(*args):
         """ adds list of numbers"""

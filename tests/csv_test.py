@@ -1,3 +1,5 @@
+# pylint: skip-file
+
 from calc.calculations.addition import Addition
 from calc.calculations.subtraction import Subtraction
 from calc.calculations.multiplication import Multiplication

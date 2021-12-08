@@ -1,23 +1,11 @@
-import time
-from watchdog.observers import Observer
-from watchdog.events import PatternMatchingEventHandler
+# pylint: skip-file
 
+import csv
 
-if __name__ == "__main__":
-    patterns = ["*"]
-    ignore_patterns = None
-    ignore_directories = False
-    case_sensitive = True
-    my_event_handler = PatternMatchingEventHandler(patterns, ignore_patterns, ignore_directories, case_sensitive)
+with open('results/calc_log.csv', 'w') as new_file:
+    fieldnames = ['unix_time', 'filename', 'record_number', 'operation', 'calc_result']
+    csv_writer = csv.DictWriter(new_file, fieldnames=fieldnames)
 
-    def on_created(event):
-        print(f"hey, {event.src_path} has been created!")
+    csv_writer.writeheader()
+    csv_writer.writerow([notgonnawork])
 
-    def on_deleted(event):
-        print(f"what the f**k! Someone deleted {event.src_path}!")
-
-    def on_modified(event):
-        print(f"hey buddy, {event.src_path} has been modified")
-
-    def on_moved(event):
-        print(f"ok ok ok, someone moved {event.src_path} to {event.dest_path}")

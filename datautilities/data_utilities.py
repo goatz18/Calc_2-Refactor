@@ -7,4 +7,3 @@ def read_data(data_path):
     data= pd.read_csv(data_path)
     data_frame = pd.DataFrame(data, columns=['value_a', 'value_b', 'result'])
     return data_frame
-

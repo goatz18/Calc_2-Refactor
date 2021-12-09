@@ -15,11 +15,11 @@ def cal_test_df(dataframe, filename, operation, operand):
         unix_time_stamp = int(time.time())
         my_tuple = (first_value, second_value, final_result)
         if operation == 'add':
-            Calculator.add_numbers()
+            Calculator.add_numbers(my_tuple)
         elif operation == 'subtract':
-            Calculator.subtract_numbers()
+            Calculator.subtract_numbers(my_tuple)
         elif operation == 'multiply':
-            Calculator.multiply_numbers()
+            Calculator.multiply_numbers(my_tuple)
         elif operation == 'divide':
             if second_value == 0:
                 zero_error = "Divide By Zero"

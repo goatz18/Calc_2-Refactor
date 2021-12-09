@@ -11,15 +11,15 @@ def cal_test_df(dataframe, filename, operation, operand):
 
         first_value = dataframe.iat[column_number, 0]
         second_value = dataframe.iat[column_number, 1]
-        final_result = dataframe.iat[column_number, 3]
+        final_result = dataframe.iat[column_number, 2]
         unix_time_stamp = int(time.time())
         my_tuple = (first_value, second_value, final_result)
         if operation == 'add':
-            Calculator.add_numbers(my_tuple)
+            Calculator.add_numbers()
         elif operation == 'subtract':
-            Calculator.subtract_numbers(my_tuple)
+            Calculator.subtract_numbers()
         elif operation == 'multiply':
-            Calculator.multiply_numbers(my_tuple)
+            Calculator.multiply_numbers()
         elif operation == 'divide':
             if second_value == 0:
                 zero_error = "Divide By Zero"

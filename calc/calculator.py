@@ -11,7 +11,9 @@ class Calculator:
 
     @staticmethod
     def get_last_calc_value():
-        """Gets the last calculated value"""
+        """Gets the last calculated value
+        :rtype: object
+        """
         return Calculations.get_last_calculation_result_value()
 
     @staticmethod

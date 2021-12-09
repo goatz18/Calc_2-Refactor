@@ -2,11 +2,11 @@
 from calc.calculations.multiplication import Multiplication
 
 
-def test_calculation_subtraction():
-    """testing that our calculator has a static method for multiplication"""
+def test_calculation_multiplication():
+    """testing that our calculator has a static method for Multiplication"""
     # Arrange
-    mynumbers = (1.0, 2.0)
-    multiplication = Multiplication(mynumbers)
+    my_numbers = (1.0, 3.0)
+    multiplication = Multiplication(my_numbers)
     # Act
     # Assert
-    assert multiplication.get_result() == 2.0
+    assert multiplication.get_result() == 3.0

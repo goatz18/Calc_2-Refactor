@@ -5,6 +5,18 @@
 
 [![Build Status](https://app.travis-ci.com/goatz18/Calc_2-Refactor.svg?branch=main)](https://app.travis-ci.com/goatz18/Calc_2-Refactor)
 
+![add](images/add.png)
+
+![subtract](images/subtraction.png)
+
+![multiply](images/multiply.png)
+
+![divide](images/divide.png)
+
+![zero](images/zero.png)
+
+![pytest](images/pylint.png)
+
 ### Quick reference stuff:
 
 Run Pip Install pip install -r requirements.txt

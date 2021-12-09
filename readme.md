@@ -5,6 +5,8 @@
 
 [![Build Status](https://app.travis-ci.com/goatz18/Calc_2-Refactor.svg?branch=main)](https://app.travis-ci.com/goatz18/Calc_2-Refactor)
 
+![pytest](images/pylint.png)
+
 ### Quick reference stuff:
 
 Run Pip Install pip install -r requirements.txt

@@ -30,8 +30,9 @@ def calc_add(csvname, column_log):
     data_util = read_data(filepath)
     operation = 'add'
     operand = '+'
-    add_results_list, add_calc_result, \
-    final_result, newdb_list = cal_test_df(data_util, csvname, operation, operand)
+    add_results_list, \
+        add_calc_result, \
+        final_result, newdb_list = cal_test_df(data_util, csvname, operation, operand)
     del newdb_list
     assert add_calc_result, final_result == add_calc_result
     results_df = pd.DataFrame(add_results_list, columns=column_log)
@@ -46,7 +47,7 @@ def calc_sub(csvname, column_log):
     operation = 'subtract'
     operand = '-'
     sub_results_list, sub_calc_result, \
-    final_result, newdb_list = cal_test_df(data_util, csvname, operation, operand)
+        final_result, newdb_list = cal_test_df(data_util, csvname, operation, operand)
     del newdb_list
     assert sub_calc_result, final_result == sub_calc_result
     results_df = pd.DataFrame(sub_results_list, columns=column_log)
@@ -61,7 +62,7 @@ def calc_mult(csvname, column_log):
     operation = 'multiply'
     operand = '*'
     mult_results_list, mult_calc_result, \
-    final_result, newdb_list = cal_test_df(data_util, csvname, operation, operand)
+        final_result, newdb_list = cal_test_df(data_util, csvname, operation, operand)
     del newdb_list
     assert mult_calc_result, final_result == mult_calc_result
     results_df = pd.DataFrame(mult_results_list, columns=column_log)
@@ -78,7 +79,7 @@ def calc_div(csvname, column_log):
     newdb_columns = ["Time_Stamp", "File_Name", "Record_Number", "Error"]
     operation = operation.strip()
     div_results_list, div_calc_result, \
-    final_result, newdb_list = cal_test_df(data_util, csvname, operation, operand)
+        final_result, newdb_list = cal_test_df(data_util, csvname, operation, operand)
     assert div_calc_result, final_result == div_calc_result
     results_df = pd.DataFrame(div_results_list, columns=column_log)
     results_out = os.path.join(OUT_PATH, csvname)

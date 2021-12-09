@@ -4,8 +4,8 @@ import os
 from datautilities.data_utilities import pd, read_data
 from calc.csv_test import cal_test_df
 
-IN_PATH = os.getcwd()
-OUT_PATH = os.getcwd()
+IN_PATH = r'C:/Users/Vintage PC/PycharmProjects/Calc_2-Refactor/datautilities/'
+OUT_PATH = "C:\\Users\\Vintage PC\\PycharmProjects\\Calc_2-Refactor\\log\\"
 
 
 def test_datautilities():
@@ -13,7 +13,7 @@ def test_datautilities():
     print(os.getcwd())
     for csvname in os.listdir(IN_PATH):
 
-        column_log = ["value_a", "value_b", "result"]
+        column_log = ["TimeStamp", "FileName", "Record_Number", "Operation", "Result"]
         if csvname == "addition.csv":
             calc_add(csvname, column_log)
         elif csvname == "subtraction.csv":

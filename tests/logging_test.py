@@ -14,13 +14,13 @@ def test_datautilities():
     for csvname in os.listdir(IN_PATH):
 
         column_log = ["TimeStamp", "FileName", "Record_Number", "Operation", "Result"]
-        if csvname == "addition.csv":
+        if csvname == "addition_test.csv":
             calc_add(csvname, column_log)
-        elif csvname == "subtraction.csv":
+        elif csvname == "subtraction_test.csv":
             calc_sub(csvname, column_log)
-        elif csvname == "multiplication.csv":
+        elif csvname == "multiplication_test.csv":
             calc_mult(csvname, column_log)
-        elif csvname == "division.csv":
+        elif csvname == "division_test.csv":
             calc_div(csvname, column_log)
 
 

@@ -17,9 +17,9 @@ class DivisionTest(unittest.TestCase):
     def test_calculation_division(self):
         """testing that our calculator has a static method for division"""
         # Arrange
-        my_numbers = (4.0, 2.0, 0.0)
+        my_numbers = (6.0, 2.0, 0.0)
         self.perform_division(my_numbers)
         # Act
         # Assert
-        assert self.calc.get_result() == 2.0
+        assert self.calc.get_result() == 3.0
         assert self.assertRaises(ZeroDivisionError)

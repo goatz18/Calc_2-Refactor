@@ -36,3 +36,19 @@ class Calculator:
         """ divide_numbers  from result"""
         Calculations.add_division_calculation(tuple_values)
         return True
+
+    @staticmethod
+    def get_history():
+        """ Get history """
+        return Calculations.history
+
+    @staticmethod
+    def get_history_from_csv():
+        """ Get history """
+        return Calculations.read_history_from_csv()
+
+    @staticmethod
+    def write_history_to_csv():
+        """ Get history """
+        return Calculations.write_history_to_csv()
+    

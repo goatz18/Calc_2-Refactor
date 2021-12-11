@@ -11,6 +11,15 @@ class Calculations:
     # pylint: disable=too-few-public-methods
 
     @staticmethod
+    def read_history_from_csv():
+        """Read the history from csv and put it into the history """
+    @staticmethod
+
+    def write_history_to_csv():
+        """Write the history to csv file"""
+    # pylint: disable=too-few-public-methods
+
+    @staticmethod
     def clear_history():
         """ clear_history"""
         Calculations.history.clear()

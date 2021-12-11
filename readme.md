@@ -1,9 +1,15 @@
 # IS 601 Calculator Project
 #### Author: Jason W. Guerrieri (goatz18)
 
-### Travis Build Status
+### Flash Message & validation
+
+![flash](images/flash.png)
+
+### Travis
 
 [![Build Status](https://app.travis-ci.com/goatz18/Calc_2-Refactor.svg?branch=main)](https://app.travis-ci.com/goatz18/Calc_2-Refactor)
+
+### CSV Read/Write/Pylint
 
 ![add](images/add.png)
 

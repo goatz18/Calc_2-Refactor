@@ -4,7 +4,7 @@ from csvmanager.read import Read
 from csvmanager.write import Write
 from flask import render_template, request, flash, redirect, url_for, session
 
-filepath = 'webcalculations.csv'
+filepath = 'csvmanager/webcalculations.csv'
 
 class CalculatorController(ControllerBase):
     @staticmethod

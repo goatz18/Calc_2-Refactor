@@ -1,10 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Behind the Web</title>
-    <meta content="width=device-width, initial-scale=1" name="viewport">
-    <style>
+{% extends "base.html" %}
+{% block title %}Behind The Web{% endblock %}
+{% block head %}
+    {{ super() }}
+    <style type="text/css">
+        .important { color: #336699; }
+
         * {
             box-sizing: border-box;
         }
@@ -13,56 +13,10 @@
         body {
             font-family: Arial, Helvetica, sans-serif;
             margin: 0;
-            background-image: url("/back.jpg");
             background-color: white;
             background-position: center top;
             background-repeat: repeat-y;
             background-size: contain;
-        }
-
-        /* Header/logo Title */
-        .header {
-            padding-top: 35px;
-            padding-bottom: 1px;
-            text-align: center;
-            color: white;
-            font-size: 35px;
-            background-color: rgba(70,10,92,0.85);
-        }
-
-        /* Style the top navigation bar */
-        .navbar {
-            display: flex;
-            float: right;
-            padding: 14px 20px;
-            background: rgba(0,0,0,0.0);
-        }
-
-        /* Style the navigation bar links */
-        .navbar a {
-            color: white;
-            padding: 14px 20px;
-            text-decoration: none;
-            text-align: center;
-            font-size: 22px;
-            font-weight: bold;
-        }
-
-        /* Change color on hover */
-        .navbar a:hover {
-            background-color: white;
-            color: rebeccapurple;
-        }
-
-        .logo {
-            color: white;
-            float: left;
-            padding: 21px 20px;
-            text-decoration: none;
-            text-align: center;
-            font-size: 3vw;
-            font-weight: bold;
-            position: absolute;
         }
 
         /* Column container */
@@ -109,19 +63,6 @@
             font-weight: bold;
         }
 
-        a:link, a:visited {
-            text-align: center;
-            text-decoration: none;
-            display: inline-block;
-            color: #E1F1FF;
-            padding: 6px 20px;
-            font-size: 20px;
-        }
-
-        a:hover, a:active {
-            background-color: #E1F1FF;
-            color: #0060A8;
-        }
 
         /* image, just for this example */
         img {
@@ -179,21 +120,9 @@
             }
         }
         @media screen and (max-width: 828px) {
-            .logo {
-                font-size: 25px;
-            }
-
-            .navbar {
-                flex-direction: column;
-            }
             .main-bottom {
                 padding-left: 50px;
                 padding-right: 50px;
-            }
-        }
-        @media screen and (min-width: 1100px) {
-            .logo {
-                font-size: 33px;
             }
         }
         @media screen and (max-width: 600px) {
@@ -203,53 +132,50 @@
         }
 
     </style>
-</head>
-<body>
-    <!-- Navigation Bar -->
-    <div class="logo">History of the Internet</div>
-    <div class="navbar">
-        <a href="http://history18.eastus.azurecontainer.io">Home</a>
-        <a href="http://history18.eastus.azurecontainer.io/about.html">About</a>
-    </div>
-    <!-- Header -->
-    <div class="header">
+
+{% endblock %}
+{% block content %}
+
+    <div>
         <h1>The Internet</h1>
         <h3 style="margin-bottom: 42px">Behind the Web</h3>
     </div>
+
+<body background="{{ url_for('static', filename='images/back.jpg') }}">
 <article>
     <!-- The flexible grid (content) -->
     <div class="row">
         <div class="side">
             <h2 style="font-size: 42px;margin-top: 0;text-align: center;padding-top: 19px">What Started It All</h2>
             <h4 style="margin-bottom: 20px;text-align: center">The Atomic Bomb</h4>
-            <img alt="atomic" class="responsive" src="/atomic.jpg" style="float:right;clear:right;padding: 20px 20px 35px 20px">
-            <p style="padding-left: 25px;padding-right: 25px">The threat of atomic warfare threatened to cripple a central communication network with one bomb.</p>
+                <img alt="atomic" class="responsive" src="{{ url_for('static', filename='images/atomic.jpg') }}" style="float:right;clear:right;padding: 20px 20px 35px 20px">
+                    <p style="padding-left: 25px;padding-right: 25px">The threat of atomic warfare threatened to cripple a central communication network with one bomb.</p>
             <h4 style="margin-bottom: 20px;text-align: center">Circuit Switching</h4>
-            <img alt="switch" class="responsive" src="/switchboard.jpg" style="float:right;clear:right;padding: 20px 20px 35px 20px;">
-            <p style="padding-left: 25px;padding-right: 25px">The use of circuit switching required a central location that would connect multiple points of communication. This flaw lead to the idea of packet switching, and the seed of the world wide web was born.</p>
+                <img alt="switch" class="responsive" src="{{ url_for('static', filename='images/switchboard.jpg') }}" style="float:right;clear:right;padding: 20px 20px 35px 20px;">
+                    <p style="padding-left: 25px;padding-right: 25px">The use of circuit switching required a central location that would connect multiple points of communication. This flaw lead to the idea of packet switching, and the seed of the world wide web was born.</p>
         </div>
         <div class="main">
-            <img alt="darpa" class="responsive" src="/darpa.png" style="float:right;clear:both;max-height: 225px;width: auto;padding: 20px">
+            <img alt="darpa" class="responsive" src="{{ url_for('static', filename='images/darpa.png') }}" style="float:right;clear:both;max-height: 225px;width: auto;padding: 20px">
             <h2>February 7, 1958</h2>
             <h4>President Eisenhower Founds ARPA</h4>
-            <p>
-                The Advanced Research Projects Agency (ARPA), known as DARPA today, was founded after the Soviet Union launched Sputnik 1 in 1957. One of their projects was ARPANET, and it aimed at creating a wide area packet switched network with distributed control, the foundation that the modern internet sits upon.
-            </p>
+                <p>
+                    The Advanced Research Projects Agency (ARPA), known as DARPA today, was founded after the Soviet Union launched Sputnik 1 in 1957. One of their projects was ARPANET, and it aimed at creating a wide area packet switched network with distributed control, the foundation that the modern internet sits upon.
+                </p>
             <h2>J.C. Licklider</h2>
             <h4>The Math Behind The Idea of Modern Packet Switching</h4>
-            <p>
-                A psychologist and computer scientist by trade, it's Licklider who created the framework for the mathematics behind the idea of sending a self certifiable message over a packet switched network. Other members of ARPA and the scientific community, using his initial mathematics, helped get ARPANET off the ground.
-            </p>
+                <p>
+                    A psychologist and computer scientist by trade, it's Licklider who created the framework for the mathematics behind the idea of sending a self certifiable message over a packet switched network. Other members of ARPA and the scientific community, using his initial mathematics, helped get ARPANET off the ground.
+                </p>
             <h2>Leonard Kleinrock</h2>
             <h4>Que-ing Theory</h4>
-            <p>
-                Kleinrock's doctoral thesis at MIT was on the mathematics of Que-ing theory, which was crucial to packet switching and formed a basis for how the decentralized "nodes" will communicate over the early ARPANET.
-            </p>
+                <p>
+                    Kleinrock's doctoral thesis at MIT was on the mathematics of Que-ing theory, which was crucial to packet switching and formed a basis for how the decentralized "nodes" will communicate over the early ARPANET.
+                </p>
             <h2>Paul Baran</h2>
             <h4>"Hot Potato" Routing"</h4>
-            <p>
-                Baran pioneered the idea of the fish net network, or "Hot Potato" routing, which is to send chopped up pieces of a message with each piece being it's own packet. Each packet had a "to" and "from" attached to itself, in case any piece "got lost," it could find it's way, or another packet would be sent. When all the packets would finally arrive, they would be assembled, and the message will be delivered.
-            </p>
+                <p>
+                    Baran pioneered the idea of the fish net network, or "Hot Potato" routing, which is to send chopped up pieces of a message with each piece being it's own packet. Each packet had a "to" and "from" attached to itself, in case any piece "got lost," it could find it's way, or another packet would be sent. When all the packets would finally arrive, they would be assembled, and the message will be delivered.
+                </p>
             <h2>
                 October 29, 1969
             </h2>
@@ -269,17 +195,17 @@
     <div class="row">
         <div class="main-bottom">
             <h4>Vince Cerf & Bob Kahn</h4>
-            <p>
-                They took Licklider's, and all the other's mathematics, and combined them into the necessary electrical engineering behind the early ARPANET. They created the Transmission Control Protocol/Internet Protocol, or TCP/IP, which is one of the backbones of the modern Internet.
-            </p>
+                <p>
+                    They took Licklider's, and all the other's mathematics, and combined them into the necessary electrical engineering behind the early ARPANET. They created the Transmission Control Protocol/Internet Protocol, or TCP/IP, which is one of the backbones of the modern Internet.
+                </p>
             <h4>Bob Taylor</h4>
-            <p>
-                Played an instrumental role in connecting large mainframe computers to multiple individual client computers. Before that there was just one client for each mainframe computer. He also was key to eventually getting all mainframe computers connected to each other directly.
-            </p>
+                <p>
+                    Played an instrumental role in connecting large mainframe computers to multiple individual client computers. Before that there was just one client for each mainframe computer. He also was key to eventually getting all mainframe computers connected to each other directly.
+                </p>
             <h4>Larry Roberts</h4>
-            <p>
-                Recruited to assist Bob Taylor to network the mainframe computers together. Different locations used different mainframes and they were not built to communicate to other mainframes. They utilized an innovative approach where each mainframe would have to be uniquely coded to an Interface Messaging Processor (IMP), that then communicated to other IMPs that were connected and coded to other mainframes.
-            </p>
+                <p>
+                    Recruited to assist Bob Taylor to network the mainframe computers together. Different locations used different mainframes and they were not built to communicate to other mainframes. They utilized an innovative approach where each mainframe would have to be uniquely coded to an Interface Messaging Processor (IMP), that then communicated to other IMPs that were connected and coded to other mainframes.
+                </p>
         </div>
     </div>
 
@@ -293,29 +219,29 @@
         <div class="main-bottom">
             <h2>Bolt Beranek and Newman (BBN)</h2>
             <h4>Won the contract to Build the first IMPs</h4>
-            <p>
-                BBN Team Lead Frank Heart and team won the contract to build the ARPANET mainframe IMPs on July 1, 1969. The first IMP was delivered to UCLA and graduate student Stephen Crocker wrote the code for UCLA's computer to communicate with. Later, Bob Metcalf codes MIT's mainframe to communicate with it's IMP.
-            </p>
-            <p>
-                October 29, 1969 the first message over ARPANET is sent and received.
-            </p>
+                <p>
+                    BBN Team Lead Frank Heart and team won the contract to build the ARPANET mainframe IMPs on July 1, 1969. The first IMP was delivered to UCLA and graduate student Stephen Crocker wrote the code for UCLA's computer to communicate with. Later, Bob Metcalf codes MIT's mainframe to communicate with it's IMP.
+                </p>
+                <p>
+                    October 29, 1969 the first message over ARPANET is sent and received.
+                </p>
             <h2>Raymond Tomlinson</h2>
             <h4>Inventor of E-Mail: The @ Sign Guy!</h4>
-            <p>
-                In the span of only one year of ARPANET being online, computers are connected, files are sent, and e-mail is invented.
-            </p>
+                <p>
+                    In the span of only one year of ARPANET being online, computers are connected, files are sent, and e-mail is invented.
+                </p>
             <h2>April 1971</h2>
             <h4>18 mainframe computers are connected to ARPANET.</h4>
             <h2>1972</h2>
             <h4>Fewer than 25 computers on ARPANET</h4>
-            <p>
-                The very first International Conference on Computers and Communications is held in October of 1972 in Washington, DC. ARPANET is a big hit and it's future is brought that much closer to the modern internet.
-            </p>
+                <p>
+                    The very first International Conference on Computers and Communications is held in October of 1972 in Washington, DC. ARPANET is a big hit and it's future is brought that much closer to the modern internet.
+                </p>
             <h2>1992</h2>
             <h4>TCP/IP</h4>
-            <p>
-                Vince Cerf and Bob Kahn invent TCP/IP, which later in 1983 wins out against other internet protocols, and is finally named the official Internet Protocol.
-            </p>
+                <p>
+                    Vince Cerf and Bob Kahn invent TCP/IP, which later in 1983 wins out against other internet protocols, and is finally named the official Internet Protocol.
+                </p>
         </div>
     </div>
 
@@ -329,30 +255,32 @@
         <div class="main-bottom">
             <h2>December 1991</h2>
             <h4>Congressional Legislature expands ARPANET to the public.</h4>
-            <p>
-                Al Gore introduces a bill that injects $600 million dollars into further expansion of the ARPANET and promotes the innovation that would become the foundational technology advancements leading to the commercial Internet as we know it today.
-            </p>
+                <p>
+                    Al Gore introduces a bill that injects $600 million dollars into further expansion of the ARPANET and promotes the innovation that would become the foundational technology advancements leading to the commercial Internet as we know it today.
+                </p>
             <h2>Tim Berners-Lee</h2>
             <h4>Invented the World Wide Web</h4>
-            <p>
-                Tim Berners-Lee and his team are invented HTTP and HTML, Hypetext Transfer Protocol and HyperText Markup Language. Both introduce ways for personal computers to view and display internet web pages.
-            </p>
+                <p>
+                    Tim Berners-Lee and his team are invented HTTP and HTML, Hypetext Transfer Protocol and HyperText Markup Language. Both introduce ways for personal computers to view and display internet web pages.
+                </p>
             <h2>1994</h2>
             <h4>Birth of the Web Browser</h4>
-            <p>
-                Tim Berners-Lee founds the World Wide Web Project and later the World Wide Web Consortium (W3C) with the aim at unifying standards across the web.
-            </p>
-            <p>
-                Marc Anderson codes the first web browser called MOSAIC, later known as Netscape. The next chapter of the Internet begins, the Browser Wars.
-            </p>
+                <p>
+                    Tim Berners-Lee founds the World Wide Web Project and later the World Wide Web Consortium (W3C) with the aim at unifying standards across the web.
+                </p>
+                <p>
+                    Marc Anderson codes the first web browser called MOSAIC, later known as Netscape. The next chapter of the Internet begins, the Browser Wars.
+                </p>
         </div>
     </div>
 
 </article>
-<!-- Footer -->
-    <div class="footer">
-        <a href="https://github.com/goatz18/internet-history#readme" rel="nofollow" title="Jason W. Guerrieri Github">Jason W. Guerrieri &#169;</a>
-        <a href="http://validator.w3.org/check/referer" rel="nofollow" title="Validate as HTML5"><img alt="w3c" class="responsive" src="/w3cicon.png" style="padding: 0"></a>
-    </div>
+
 </body>
-</html>
+{% endblock %}
+
+    <div>
+        {% block footer %}
+            &copy; Copyright 2021 by&nbsp;<a href="https://github.com/goatz18/Calc_2-Refactor.git" rel="nofollow" title="Jason W. Guerrieri Github">Jason W. Guerrieri</a>.
+        {% endblock %}
+    </div>

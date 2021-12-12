@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SOLID</title>
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        /* Style the body */
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0;
+            background-image: url("images/solid.jpg");
+            background-color: lightgoldenrodyellow;
+            background-position: center top;
+            background-repeat: repeat-y;
+            background-size: contain;
+        }
+
+        /* Header/logo Title */
+        .header {
+            padding-top: 35px;
+            padding-bottom: 1px;
+            text-align: center;
+            color: lightgoldenrodyellow;
+            font-size: 35px;
+            background-color: rgba(98,155,224,0.55);
+        }
+
+        /* Style the top navigation bar */
+        .navbar {
+            display: flex;
+            float: right;
+            padding: 14px 20px;
+            background: rgba(0,0,0,0.0);
+        }
+
+        /* Style the navigation bar links */
+        .navbar a {
+            color: lightgoldenrodyellow;
+            padding: 14px 20px;
+            text-decoration: none;
+            text-align: center;
+            font-size: 22px;
+            font-weight: bold;
+        }
+
+        /* Change color on hover */
+        .navbar a:hover {
+            background-color: lightgoldenrodyellow;
+            color: black;
+        }
+
+        .logo {
+            color: lightgoldenrodyellow;
+            float: left;
+            padding: 21px 20px;
+            text-decoration: none;
+            text-align: center;
+            font-size: 3vw;
+            font-weight: bold;
+            position: absolute;
+        }
+
+        /* Column container */
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        /* Create two unequal columns that sits next to each other */
+        /* Sidebar/left column */
+        .side {
+            flex:25%;
+            background-color: rgba(98,155,224,0.7);
+            padding: 20px;
+            color: lightgoldenrodyellow;
+        }
+
+        /* Main column */
+        .main {
+            flex:75%;
+            background-color: rgba(239,239,210,0.3);
+            color: lightgoldenrodyellow;
+            text-align: left;
+            padding-left: 75px;
+            padding-right: 75px;
+        }
+        .footer a:hover {
+            background-color: white;
+            color: rgba(98,155,224,0.7);
+        }
+
+        /* Footer */
+        .footer {
+            padding: 20px;
+            text-align: center;
+            background: rgba(98,155,224,0.7);
+            color: #E1F1FF;
+            font-weight: bold;
+        }
+
+        a:link, a:visited {
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            color: lightgoldenrodyellow;
+            padding: 6px 20px;
+            font-size: 20px;
+        }
+
+        a:hover, a:active {
+            background-color: #E1F1FF;
+            color: white;
+        }
+
+        /* Fake image, just for this example */
+        img {
+            background-color: rgba(255,255,255,0.0);
+            vertical-align: bottom;
+        }
+        .responsive {
+            width: 75%;
+            height: auto;
+        }
+        .break {
+            width: 100%;
+            font-size: 50px;
+            text-align: center;
+            color: lightgoldenrodyellow;
+            margin: auto;
+            height: 100px;
+            background-color: rgba(98,155,224,0.55);
+        }
+
+        .main-bottom {
+            flex:75%;
+            background-color: rgba(239,239,210,0.3);
+            color: lightgoldenrodyellow;
+            padding-left: 125px;
+            padding-right: 125px;
+            padding-bottom: 18px
+        }
+        p {
+            font-size: 30px;
+        }
+        h2 {
+            font-size: 45px;
+        }
+        h4 {
+            font-size: 38px;
+        }
+        h6 {
+            font-size: 50px;
+            margin: 0 0;
+            padding: 21px;
+        }
+        /* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
+        @media only screen and (max-width: 748px) {
+            .side {
+                width: 100%;
+            }
+            .main {
+                width: 100%;
+                padding-left: 50px;
+                padding-right: 50px;
+            }
+            .row {
+                flex-direction: column;
+            }
+            .break {
+                height: 155px;
+            }
+        }
+        @media screen and (max-width: 828px) {
+            .logo {
+                font-size: 25px;
+            }
+
+            .navbar {
+                flex-direction: column;
+            }
+            .main-bottom {
+                padding-left: 50px;
+                padding-right: 50px;
+            }
+        }
+        @media screen and (min-width: 1100px) {
+            .logo {
+                font-size: 33px;
+            }
+        }
+        @media screen and (max-width: 600px) {
+            img {
+                vertical-align: text-bottom;
+            }
+            .responsive {
+                width: 100%;
+            }
+        }
+
+    </style>
+</head>
+<body>
+<!-- Navigation Bar -->
+<div class="logo">Object Oriented Programming</div>
+<div class="navbar">
+    <a href="http://history18.eastus.azurecontainer.io">Home</a>
+    <a href="http://history18.eastus.azurecontainer.io/about.html">About</a>
+</div>
+<!-- Header -->
+<div class="header"><br>
+    <h1>S.O.L.I.D.</h1>
+    <h3 style="margin-bottom: 42px">S.O.L.I.D. Principles in Calculator</h3>
+</div>
+<article>
+    <!-- The flexible grid (content) -->
+    <div class="row">
+        <div class="side">
+            <h2 style="font-size: 48px;margin-top: 0;text-align: center;padding-top: 19px">Fundamental Concepts</h2>
+            <h4 style="margin-bottom: 20px;margin-top: 20px;text-align: center">1. Single Responsibility Principle</h4>
+            <p style="padding-left: 25px;padding-right: 25px">The Single Responsibility Principle requires that a class should have only one job. So if a class has more than one responsibility, it becomes coupled. A change to one responsibility results to modification of the other responsibility.</p>
+            <h4 style="margin-bottom: 20px;margin-top: 20px;text-align: center">2. Open-Closed Principle</h4>
+            <p style="padding-left: 25px;padding-right: 25px">Software entities such as Classes, modules, and functions should be open for extension, not modification.</p>
+            <h4 style="margin-bottom: 20px;margin-top: 20px;text-align: center">3. Liskov Substitution Principle</h4>
+            <p style="padding-left: 25px;padding-right: 25px">The main idea behind Liskov Subtitution Principle is that, for any class, a client should be able to use any of its subtypes indistinguishably, without even noticing, and therefore without compromising the expected behavior at runtime. This means that clients are completely isolated and unaware of changes in the class hierarchy.</p>
+            <h4 style="margin-bottom: 20px;margin-top: 20px;text-align: center">4. Interface Segregation Principle</h4>
+            <p style="padding-left: 25px;padding-right: 25px">Make fine grained interfaces that are client specific Clients should not be forced to depend upon interfaces that they do not use. This principle deals with the disadvantages of implementing big interfaces.</p>
+        </div>
+        <div class="main"><br>
+            <h6 style="text-align: center">1. Single Responsibility Principle</h6>
+            <h2>Calculator Example</h2>
+            <p>
+                Here is an example of how the job of the class "Calculation" doesn't actually do any calculating as it merely acquires a list of float values first, and then the separate classes for computing have their own individual classes. The calculation class could do both find float values and perform calculations, but that would violate the Single Responsibility Principle. For example here are also the "Addition" and "Subtraction" classes that all accomplish only one job, all seen below.
+            </P>
+            <img alt="addition" class="responsive" src="images/calculation.png" style="padding: 20px">
+            <img alt="addition" class="responsive" src="images/inheritancesub.png" style="padding: 20px">
+            <img alt="addition" class="responsive" src="images/polymorphism.png" style="padding: 20px">
+
+        </div>
+    </div>
+
+    <div class="break">
+        <h6>
+            2. Open-Closed Principle
+        </h6>
+    </div>
+
+    <div class="row">
+        <div class="main-bottom">
+            <h4>Calculator Example</h4>
+            <p>
+                For this principle, our example from above also happens to apply. Instead of adding simple if statements to the "Calculation" class, for example
+            </p>
+            <p>
+                if self.calculation == 'addition'<br>
+                return self.value + a
+            </p>
+            <p>
+                We instead create separate classes that extend Calculation, such as "Addition(Calculation)" and "Subtraction(Calculation)" to implement the new behavior.
+            </p>
+
+        </div>
+    </div>
+
+    <div class="break">
+        <h6>
+            3. Liskov Substitution Principle
+        </h6>
+    </div>
+
+    <div class="row">
+        <div class="main-bottom">
+            <h4>Calculator Example</h4>
+            <p>
+                In the class "Calculations" we get the history of calculations and is a great example of the Liskov Substitution Principle, as all specializations of the class are suitable by the parent or superclass.
+            </p>
+            <img alt="addition" class="responsive" src="images/3liskov.png" style="padding: 20px">
+
+        </div>
+    </div>
+
+    <div class="break">
+        <h6>
+            4. Interface Segregation Principle
+        </h6>
+    </div>
+
+    <div class="row">
+        <div class="main-bottom">
+            <h4>Calculator Example</h4>
+            <p>
+                In this example you can see here that the "Calculator" class provides us with our core interface segregations, resulting in loose coupling and easy testing.
+            </p>
+            <img alt="abstract" class="responsive" src="images/4interface.png" style="padding: 20px">
+        </div>
+    </div>
+    <div class="break">
+        <h6>
+            5. Dependency Inversion Principle
+        </h6>
+    </div>
+
+    <div class="row">
+        <div class="main-bottom">
+            <h4>Calculator Example</h4>
+            <p>
+                For this example we go back to the "Calculator" class, low level, that generates float values, and the many actual calculation classes, high level, such as "Addition" and "Subtraction". They don't depend on themselves, but they do depend on abstractions. The client simply enacts the calculator and gets a result.
+            </p>
+            <img alt="addition" class="responsive" src="images/calculation.png" style="padding: 20px">
+            <img alt="addition" class="responsive" src="images/inheritancesub.png" style="padding: 20px">
+            <img alt="addition" class="responsive" src="images/polymorphism.png" style="padding: 20px">
+        </div>
+    </div>
+
+</article>
+<!-- Footer -->
+<!-- Footer -->
+<div class="footer">
+    <a href="https://github.com/goatz18/internet-history#readme" rel="nofollow" title="Jason W. Guerrieri Github">Jason W. Guerrieri &#169;</a>
+    <a href="http://validator.w3.org/check/referer" rel="nofollow" title="Validate as HTML5"><img alt="w3c" src="images/w3cicon.png" style="padding: 0"></a>
+</div>
+</body>
+</html>

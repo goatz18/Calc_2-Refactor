@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Object Oriented Programming Principles</title>
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        /* Style the body */
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0;
+            background-image: url("images/python.jpg");
+            background-color: lightgoldenrodyellow;
+            background-position: center top;
+            background-repeat: repeat-y;
+            background-size: contain;
+        }
+
+        /* Header/logo Title */
+        .header {
+            padding-top: 35px;
+            padding-bottom: 1px;
+            text-align: center;
+            color: lightgoldenrodyellow;
+            font-size: 35px;
+            background-color: rgba(98,155,224,0.55);
+        }
+
+        /* Style the top navigation bar */
+        .navbar {
+            display: flex;
+            float: right;
+            padding: 14px 20px;
+            background: rgba(0,0,0,0.0);
+        }
+
+        /* Style the navigation bar links */
+        .navbar a {
+            color: lightgoldenrodyellow;
+            padding: 14px 20px;
+            text-decoration: none;
+            text-align: center;
+            font-size: 22px;
+            font-weight: bold;
+        }
+
+        /* Change color on hover */
+        .navbar a:hover {
+            background-color: lightgoldenrodyellow;
+            color: black;
+        }
+
+        .logo {
+            color: lightgoldenrodyellow;
+            float: left;
+            padding: 21px 20px;
+            text-decoration: none;
+            text-align: center;
+            font-size: 3vw;
+            font-weight: bold;
+            position: absolute;
+        }
+
+        /* Column container */
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        /* Create two unequal columns that sits next to each other */
+        /* Sidebar/left column */
+        .side {
+            flex:25%;
+            background-color: rgba(98,155,224,0.7);
+            padding: 20px;
+            color: lightgoldenrodyellow;
+        }
+
+        /* Main column */
+        .main {
+            flex:75%;
+            background-color: rgba(239,239,210,0.3);
+            color: lightgoldenrodyellow;
+            text-align: left;
+            padding-left: 75px;
+            padding-right: 75px;
+        }
+        .footer a:hover {
+            background-color: white;
+            color: rgba(98,155,224,0.7);
+        }
+
+        /* Footer */
+        .footer {
+            padding: 20px;
+            text-align: center;
+            background: rgba(98,155,224,0.7);
+            color: #E1F1FF;
+            font-weight: bold;
+        }
+
+        a:link, a:visited {
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            color: lightgoldenrodyellow;
+            padding: 6px 20px;
+            font-size: 20px;
+        }
+
+        a:hover, a:active {
+            background-color: #E1F1FF;
+            color: white;
+        }
+
+        /* Fake image, just for this example */
+        img {
+            background-color: rgba(255,255,255,0.0);
+            vertical-align: bottom;
+        }
+        .responsive {
+            width: 75%;
+            height: auto;
+        }
+        .break {
+            width: 100%;
+            font-size: 50px;
+            text-align: center;
+            color: lightgoldenrodyellow;
+            margin: auto;
+            height: 100px;
+            background-color: rgba(98,155,224,0.55);
+        }
+
+        .main-bottom {
+            flex:75%;
+            background-color: rgba(239,239,210,0.3);
+            color: lightgoldenrodyellow;
+            padding-left: 125px;
+            padding-right: 125px;
+            padding-bottom: 18px
+        }
+        p {
+            font-size: 30px;
+        }
+        h2 {
+            font-size: 45px;
+        }
+        h4 {
+            font-size: 38px;
+        }
+        h6 {
+            font-size: 50px;
+            margin: 0 0;
+            padding: 21px;
+        }
+        /* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
+        @media only screen and (max-width: 748px) {
+            .side {
+                width: 100%;
+            }
+            .main {
+                width: 100%;
+                padding-left: 50px;
+                padding-right: 50px;
+            }
+            .row {
+                flex-direction: column;
+            }
+            .break {
+                height: 155px;
+            }
+        }
+        @media screen and (max-width: 828px) {
+            .logo {
+                font-size: 25px;
+            }
+
+            .navbar {
+                flex-direction: column;
+            }
+            .main-bottom {
+                padding-left: 50px;
+                padding-right: 50px;
+            }
+        }
+        @media screen and (min-width: 1100px) {
+            .logo {
+                font-size: 33px;
+            }
+        }
+        @media screen and (max-width: 600px) {
+            img {
+                vertical-align: text-bottom;
+            }
+            .responsive {
+                width: 100%;
+            }
+        }
+
+    </style>
+</head>
+<body>
+<!-- Navigation Bar -->
+<div class="logo">Object Oriented Programming</div>
+<div class="navbar">
+    <a href="http://history18.eastus.azurecontainer.io">Home</a>
+    <a href="http://history18.eastus.azurecontainer.io/about.html">About</a>
+</div>
+<!-- Header -->
+<div class="header"><br>
+    <h1>Object Oriented Programming</h1>
+    <h3 style="margin-bottom: 42px">Principles: Calculator Program Examples</h3>
+</div>
+<article>
+    <!-- The flexible grid (content) -->
+    <div class="row">
+        <div class="side">
+            <h2 style="font-size: 48px;margin-top: 0;text-align: center;padding-top: 19px">Fundamental Concepts</h2>
+            <h4 style="margin-bottom: 20px;margin-top: 20px;text-align: center">Encapsulation</h4>
+            <p style="padding-left: 25px;padding-right: 25px">Encapsulation describes the idea of wrapping data and all the methods that work on said data, within one unit.</p>
+            <h4 style="margin-bottom: 20px;margin-top: 20px;text-align: center">Inheritance</h4>
+            <p style="padding-left: 25px;padding-right: 25px">Inheritance is the capability of one class to derive or inherit properties from another class</p>
+            <h4 style="margin-bottom: 20px;margin-top: 20px;text-align: center">Polymorphism</h4>
+            <p style="padding-left: 25px;padding-right: 25px">Polymorphism the word means having many forms. In programming, polymorphism means having the same function name (but different signatures) being used for different types.</p>
+            <h4 style="margin-bottom: 20px;margin-top: 20px;text-align: center">Abstraction</h4>
+            <p style="padding-left: 25px;padding-right: 25px">Abstract classes can be considered as blueprints for other classes. It allows a set of methods to be created within child classes that are built from the abstract class. A class with one or more abstract methods is an abstract class.</p>
+        </div>
+        <div class="main"><br>
+            <h6 style="text-align: center">Encapsulation</h6>
+            <h2>Protected Members</h2>
+            <p>
+                Protected members are the members of a class that exist and can only be accessed only from within a certain class and it's subclasses. In Python, this is accomplished by following a convention of prefixing the name of the member by a single underscore "_".
+            </P>
+            <h2>Private Members</h2>
+            <p>
+                Private members, although similar to protected members, differ in that they are neither accessed outside of their class nor by any base class. In Python, private members can only be accessed inside of a class. Private memebers are defined by a prefix of a double underscore "__".
+            </p>
+            <p>
+                This is accomplished in the calculator program as shown below. The values used to perform calculations are getting run through a constructor under "__init__", which then uses a "staticmethod" and returns all values back as float values.
+            </p>
+            <img alt="encapsulation" class="responsive" src="images/encapsulation.png" style="padding: 20px">
+
+        </div>
+    </div>
+
+    <div class="break">
+        <h6>
+            Inheritance
+        </h6>
+    </div>
+
+    <div class="row">
+        <div class="main-bottom">
+            <h4>The Benefits of Inheritance</h4>
+            <p>
+                1. It represents real-world relationships well.<br>
+                2. It provides reusability of a code. We don’t have to write the same code again and again. Also, it allows us to add more features to a class without modifying it.<br>
+                3. It is transitive in nature, which means that if class B inherits from another class A, then all the subclasses of B would automatically inherit from class A.
+            </p>
+            <h4>Calculator Examples</h4>
+            <p>
+                The calculation class is the base/super/parent class and the addition, subtraction, multiplication, and division classes are the inherited/sub/child classes. Here is an example of the parent class "Calculation" and the child class "Addition(Calculation)":
+            </p>
+            <img alt="parent" class="responsive" src="images/inheritancebase.png" style="padding: 20px">
+            <img alt="child" class="responsive" src="images/inheritancesub.png" style="padding: 20px">
+            <p>
+                That was also an example of "Single Inheritance." That is when there is one parent class that a child class inherits from.<br>
+            </p>
+
+        </div>
+    </div>
+
+    <div class="break">
+        <h6>
+            Polymorphism
+        </h6>
+    </div>
+
+    <div class="row">
+        <div class="main-bottom">
+            <h4>Polymorphism in Python</h4>
+            <p>
+                In programming, polymorphism means that the same function name(s) (however different signatures) are being used for different types.
+            </p>
+            <h4>Calculator Example: User-Defined Polymorphic Functions</h4>
+            <p>
+                The "get_result" class method is used for all addition, subtraction, multiplication, and division child classes. For example, here is addition and subtraction child classes below:
+            </p>
+            <img alt="addition" class="responsive" src="images/inheritancesub.png" style="padding: 20px">
+            <img alt="addition" class="responsive" src="images/polymorphism.png" style="padding: 20px">
+
+        </div>
+    </div>
+
+    <div class="break">
+        <h6>
+            Abstraction
+        </h6>
+    </div>
+
+    <div class="row">
+        <div class="main-bottom">
+            <h4>Abstract Classes in Python</h4>
+            <p>
+                An abstract class can be considered as a blueprint for other classes. It allows you to create a set of methods that must be created within any child classes that were built from that abstract class. Usually abstract classes require decorating as "abstractmethod", except when implemented through subclassing.
+            </p>
+            <p>
+                By subclassing from a base, we can avoid the need to register the class explicitly. In this case, the Python class management is used to recognize 'PluginImplementation' as implementing the abstract PluginBase. Here is a calculator example below using "from.abc.examplea.exampleb" and "import otherexample".
+            </p>
+            <img alt="abstract" class="responsive" src="images/abstract.png" style="padding: 20px">
+        </div>
+    </div>
+
+</article>
+<!-- Footer -->
+<!-- Footer -->
+<div class="footer">
+    <a href="https://github.com/goatz18/internet-history#readme" rel="nofollow" title="Jason W. Guerrieri Github">Jason W. Guerrieri &#169;</a>
+    <a href="http://validator.w3.org/check/referer" rel="nofollow" title="Validate as HTML5"><img alt="w3c" src="images/w3cicon.png" style="padding: 0"></a>
+</div>
+</body>
+</html>

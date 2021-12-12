@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Internet Search</title>
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        /* Style the body */
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0;
+            background-image: url("images/back.jpg");
+            background-color: white;
+            background-position: center top;
+            background-repeat: repeat-y;
+            background-size: contain;
+        }
+
+        /* Header/logo Title */
+        .header {
+            padding-top: 35px;
+            padding-bottom: 1px;
+            text-align: center;
+            color: white;
+            font-size: 35px;
+            background-color: rgba(219,68,55,0.86);
+        }
+
+        /* Style the top navigation bar */
+        .navbar {
+            display: flex;
+            float: right;
+            padding: 14px 20px;
+            background: rgba(0,0,0,0.0);
+        }
+
+        /* Style the navigation bar links */
+        .navbar a {
+            color: white;
+            padding: 14px 20px;
+            text-decoration: none;
+            text-align: center;
+            font-size: 22px;
+            font-weight: bold;
+        }
+
+        /* Change color on hover */
+        .navbar a:hover {
+            background-color: rgba(66,133,244,0.96);
+            color: indianred;
+        }
+
+        .logo {
+            color: white;
+            float: left;
+            padding: 21px 20px;
+            text-decoration: none;
+            text-align: center;
+            font-size: 3vw;
+            font-weight: bold;
+            position: absolute;
+        }
+
+        /* Column container */
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        /* Create two unequal columns that sits next to each other */
+        /* Sidebar/left column */
+        .side {
+            flex:25%;
+            background-color: rgba(15,157,88,0.62);;
+            padding: 20px;
+            color: white;
+        }
+
+        /* Main column */
+        .main {
+            flex:75%;
+            background-color: rgba(255,255,255,0.8);
+            color: rebeccapurple;
+            text-align: left;
+            padding-left: 75px;
+            padding-right: 75px;
+        }
+        .footer a:hover {
+            background-color: white;
+            color: rgba(66,133,244,0.96);
+        }
+
+        /* Footer */
+        .footer {
+            padding: 20px;
+            text-align: center;
+            background: rgba(66,133,244,0.8);
+            color: #E1F1FF;
+            font-weight: bold;
+        }
+
+        a:link, a:visited {
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            color: white;
+            padding: 6px 20px;
+            font-size: 20px;
+        }
+
+        a:hover, a:active {
+            background-color: #E1F1FF;
+            color: white;
+        }
+
+        /* Fake image, just for this example */
+        img {
+            background-color: rgba(255,255,255,0.0);
+            vertical-align: bottom;
+        }
+
+        .break {
+            width: 100%;
+            font-size: 50px;
+            text-align: center;
+            color: white;
+            margin: auto;
+            height: 100px;
+            background-color: rgba(244,160,0,0.96);
+        }
+
+        .main-bottom {
+            flex:75%;
+            background-color: rgba(255,255,255,0.8);
+            color: rebeccapurple;
+            padding-left: 125px;
+            padding-right: 125px;
+            padding-bottom: 18px
+        }
+
+        p {
+            font-size: 30px;
+        }
+        h2 {
+            font-size: 45px;
+        }
+        h4 {
+            font-size: 38px;
+        }
+        h6 {
+            font-size: 50px;
+            margin: 0 0;
+            padding: 21px;
+        }
+        /* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
+        @media only screen and (max-width: 748px) {
+            .side {
+                width: 100%;
+            }
+            .main {
+                width: 100%;
+                padding-left: 50px;
+                padding-right: 50px;
+            }
+            .row {
+                flex-direction: column;
+            }
+            .break {
+                height: 155px;
+            }
+        }
+        @media screen and (max-width: 828px) {
+            .logo {
+                font-size: 25px;
+            }
+
+            .navbar {
+                flex-direction: column;
+            }
+            .main-bottom {
+                padding-left: 50px;
+                padding-right: 50px;
+            }
+        }
+        @media screen and (min-width: 1100px) {
+            .logo {
+                font-size: 33px;
+            }
+        }
+        @media screen and (max-width: 600px) {
+            img {
+                vertical-align: text-bottom;
+            }
+        }
+
+    </style>
+</head>
+<body>
+<!-- Navigation Bar -->
+<div class="logo">History of the Internet</div>
+<div class="navbar">
+    <a href="http://history18.eastus.azurecontainer.io">Home</a>
+    <a href="http://history18.eastus.azurecontainer.io/about.html">About</a>
+</div>
+<!-- Header -->
+<div class="header">
+    <h1>True Story of The Internet</h1>
+    <h3 style="margin-bottom: 42px">Internet Search</h3>
+</div>
+<article>
+    <!-- The flexible grid (content) -->
+    <div class="row">
+        <div class="side">
+            <h2 style="font-size: 48px;margin-top: 0;text-align: center;padding-top: 19px">The Players</h2>
+            <h4 style="margin-bottom: 20px;margin-top: 20px;text-align: center">Yahoo</h4>
+            <p style="padding-left: 25px;padding-right: 25px">The first major player in Internet search game, entering in 1994. They relied on still an old engine and banner ads.</p>
+            <h4 style="margin-bottom: 20px;margin-top: 20px;text-align: center">Excite</h4>
+            <p style="padding-left: 25px;padding-right: 25px">Much like Yahoo, they started around the same time after acquiring a few early search engines.</p>
+            <h4 style="margin-bottom: 20px;margin-top: 20px;text-align: center">Overture</h4>
+            <p style="padding-left: 25px;padding-right: 25px">Not as popular as Yahoo and excite, Overture did however come up with the idea to sell search result order to companies.</p>
+            <h4 style="margin-bottom: 20px;margin-top: 20px;text-align: center">Google</h4>
+            <p style="padding-left: 25px;padding-right: 25px">Google came along and fused Overture.com's idea with a new way to search that brought up better results than Yahoo and excite.</p>
+        </div>
+        <div class="main">
+            <h2>Yahoo Vs. Excite</h2>
+            <h4>Fight for Search Dominance Round 1</h4>
+            <p>
+                Yahoo is founded by Jerry Yang and David Filo, and they started to categorize the World Wide Web, allowing it to be searchable. They controversially put up banner ads in 1995 to generate revenue, and the number of users still went up.
+            </P>
+            <p>
+                Excite similarly had an automated keyword search engine. These two companies were in a battle for search space. They started to add non-search features to compete, and search engine quality suffered.
+            </p>
+            <h2>Google It</h2>
+            <h4>It's All About the Links.</h4>
+            <p>
+                Google was founded by Larry Page and Sergey Brin in 1998. They combined keyword search with the number of links that a website has from other sites, in other words gauging its Internet "popularity" and usefulness.
+            </p>
+            <h2>Overture.com</h2>
+            <h4>Who Needs Banner Ads</h4>
+            <p>
+                Overture.com was the first to introduce targeted ad results and to sell ad space to companies in order to get their results to be higher on the list of certain keyword searches.
+            </p>
+        </div>
+    </div>
+
+    <div class="break">
+        <h6>
+            Fight for Search Round 2
+        </h6>
+    </div>
+
+    <div class="row">
+        <div class="main-bottom">
+            <h4>Google Refuses Banner Ads</h4>
+            <p>
+                Google insists on keeping it's page simple, and banner free. It's search engine based on link usefulness is innovative, but they need a way to generate revenue. Venture capitalists investing in Google apply pressure to find a revenue source.
+            </p>
+            <h4>Can A Deal Be Made</h4>
+            <p>
+                Google and Overture.com are brought together to make a deal. It's not truly known what happens, but nothing comes of it. Although, Google does go ahead with it's own targeted ad results engine which effectively copies Overture.com. Overture then sues Google and wins an unknown settlement. Overture.com founder Bill Gross obtains an undisclosed amount of Google stock.
+            </p>
+            <h4>Google IPO To The Moon</h4>
+            <p>
+                Google launches it's IPO in 2004, after the dot com bubble and still does well. The stock remained a high growth stock up to even today. Their combination of keyword, link popularity, and targeted ad results, have allowed them to expand into the juggernaut of today.
+            </p>
+        </div>
+    </div>
+
+</article>
+<!-- Footer -->
+<!-- Footer -->
+<div class="footer">
+    <a href="https://github.com/goatz18/internet-history#readme" rel="nofollow" title="Jason W. Guerrieri Github">Jason W. Guerrieri &#169;</a>
+    <a href="http://validator.w3.org/check/referer" rel="nofollow" title="Validate as HTML5"><img alt="w3c" src="images/w3cicon.png" style="padding: 0"></a>
+</div>
+</body>
+</html>

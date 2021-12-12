@@ -10,40 +10,54 @@
 {% endblock %}
 {% block content %}
 
-    <h1>My Calculator</h1>
+    <div class="d-flex justify-content-center">
+        <h1>Calculator 5000</h1>
+    </div>
+
      {% if error %}
-         <div class="alert alert-danger error" role="alert">
+        <div class="alert alert-danger error" role="alert">
              {{ error }}
         </div>
-      {% endif %}
-  <div class="mb-3 row">
+     {% endif %}
 
-    <form action="/calculator" method="POST">
-        <label for="value1" class="col-sm-2 col-form-label">Value 1:</label><br>
-        <input type="text" id="value1" name="value1" value="1"><br>
-        <label for="value2" class="col-sm-2 col-form-label">Value 2:</label><br>
-        <input type="text" id="value2" name="value2" value="2"><br>
-        <fieldset>
-        <legend>Operation</legend>
-          <div>
-            <input type="radio" name="operation" id="addition" value="addition" checked>
-            <label for="addition">addition</label>
-          </div>
-          <div>
-            <input type="radio" name="operation" id="subtraction" value="subtraction">
-            <label for="subtraction">subtraction</label>
-          </div>
-          <div>
-            <input type="radio" name="operation" id="multiplication" value="multiplication">
-            <label for="multiplication">multiplication</label>
-          </div>
-          <div>
-            <input type="radio" name="operation" id="division" value="division">
-            <label for="division">division</label>
-          </div>
-        </fieldset>
+  <div class="col-sm-3 mx-auto p-5 p-1 my-4 bg-primary text-light info shadow-lg rounded">
+    <div class="container-fluid py-2">
+        <div class="d-flex justify-content-center">
 
-        <input type="submit" value="Submit">
-    </form>
+            <span class="border border-light rounded p-5 p-3 my-4 bg-dark text-white shadow-lg ">
+
+            <form action="/calculator" method="POST">
+                <label for="value1" class="p-1">Input Value 1:</label><br>
+                <input type="text" id="value1" name="value1" value="1"><br>
+                <label for="value2" class="p-1">Input Value 2:</label><br>
+                <input type="text" id="value2" name="value2" value="2"><br>
+                <fieldset class="pb-2">
+                <legend class="p-1">Choose Operation</legend>
+                  <div class="col-md-9 offset-md-1">
+                    <input type="radio" name="operation" id="addition" value="addition" checked>
+                    <label for="addition">Addition</label>
+                  </div>
+                  <div class="col-md-9 offset-md-1">
+                    <input type="radio" name="operation" id="subtraction" value="subtraction">
+                    <label for="subtraction">Subtraction</label>
+                  </div>
+                  <div class="col-md-9 offset-md-1">
+                    <input type="radio" name="operation" id="multiplication" value="multiplication">
+                    <label for="multiplication">Multiplication</label>
+                  </div>
+                  <div class="col-md-9 offset-md-1">
+                    <input type="radio" name="operation" id="division" value="division">
+                    <label for="division">Division</label>
+                  </div>
+                </fieldset>
+
+                <input class="p-1 col-md-9 offset-md-1" type="submit" value="Submit">
+            </form>
+
+            </span>
+
+        </div>
+    </div>
   </div>
+
 {% endblock %}

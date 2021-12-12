@@ -1,6 +1,13 @@
-import os
+import pandas as pd
+from flask import render_template, request, flash, redirect, url_for, session
+
 
 class Write:
     @staticmethod
-    def data_frame_to_csv_file(filename, df):
-        return df.to_csv(os.path.abspath(filename),float_format='%.2f', index=True, header=True)
+    def write_new_calc_to_history_df(filename, result):
+        value1 = request.form['value1']
+        value2 = request.form['value2']
+        operation = request.form['operation']
+        df = pd.DataFrame(columns= [value1, value2, operation, result])
+        new_calc_history_df = df.to_csv(filename, mode='a', float_format='%.2f', index=True, header=True)
+        return new_calc_history_df

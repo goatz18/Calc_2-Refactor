@@ -20,10 +20,10 @@ def calculator_get():
 def calculator_post():
     return CalculatorController.post()
 
-@app.route("/index")
-def flash_me():
-
-    flash("flash test!!!!")
-    flash("flashdance test!!!!")
-    flash("flash the message, something's out there, test!")
-    return render_template("index.html")
+#@app.route("/index")
+#def flash_me():
+#
+#   flash("flash test!!!!")
+#    flash("flashdance test!!!!")
+#    flash("flash the message, something's out there, test!")
+#    return render_template("index.html")

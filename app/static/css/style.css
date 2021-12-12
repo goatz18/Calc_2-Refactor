@@ -1,3 +1,27 @@
 body {
-font-size: 200%;
+    font-size: 200%;
+
+}
+.navbar-brand {
+    font-size: 1.3em;
+    font-weight: bold;
+    font-family: 'Bebas Neue', cursive;
+}
+.navbar a {
+    font-size: 1.2em;
+    width: auto;
+    height: 57px;
+}
+.nav-item {
+    padding-left: 10px;
+    padding-right: 10px;
+
+}
+.nav-link {
+    font-size: 1.2em;
+    font-family: 'Bebas Neue', cursive;
+}
+.navbar-nav {
+    padding-left: 10px;
+    font-size: 1.4em;
 }

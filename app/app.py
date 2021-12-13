@@ -1,5 +1,5 @@
 """A simple flask web app"""
-from flask import Flask, flash, render_template
+from flask import Flask, flash, render_template, request
 from app.controllers.index_controller import IndexController
 from app.controllers.index_controller import BehindTheWebController
 from app.controllers.index_controller import SearchEngineWarsController
@@ -11,6 +11,9 @@ from werkzeug.debug import DebuggedApplication
 app = Flask(__name__)
 app.secret_key = b'_5#y2L"F4Q8z\n\xec]/'
 app.wsgi_app = DebuggedApplication(app.wsgi_app, True)
+
+if __name__ == '__maain__':
+    app.run(debug=True)
 
 @app.route("/", methods=['GET'])
 def index_get():
@@ -40,10 +43,8 @@ def oopoop_get():
 def oopselect_get():
     return OopSelect.get()
 
-#@app.route("/index")
-#def flash_me():
-#
-#   flash("flash test!!!!")
-#    flash("flashdance test!!!!")
-#    flash("flash the message, something's out there, test!")
+#@app.route("/calculator")
+#def divide_by_zero():
+
+#    flash("flash test!!!!")
 #    return render_template("index.html")

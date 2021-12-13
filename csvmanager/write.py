@@ -9,6 +9,7 @@ class Write:
         value1 = request.form['value1']
         value2 = request.form['value2']
         operation = request.form['operation']
-        df = pd.DataFrame(columns= [value1, value2, operation, result])
-        new_calc_history_df = df.to_csv(os.path.abspath(filepath), mode='a', float_format='%.2f', index=True, header=True)
+        data = {'Value1': [value1], 'Value2': [value2], 'Operation': [operation], 'Result': [result]}
+        df = pd.DataFrame(data)
+        new_calc_history_df = df.to_csv(os.path.abspath(filepath), mode='a', float_format='%.2f', index=False, header=False)
         return new_calc_history_df

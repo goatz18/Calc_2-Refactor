@@ -5,16 +5,68 @@
     <style type="text/css">
         .important { color: #336699; }
     </style>
+
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://unpkg.com/bootstrap-table@1.19.1/dist/bootstrap-table.min.css">
+
+        <!-- Latest compiled and minified JavaScript -->
+        <script src="https://unpkg.com/bootstrap-table@1.19.1/dist/bootstrap-table.min.js"></script>
+        <!-- Latest compiled and minified Locales -->
+        <script src="https://unpkg.com/bootstrap-table@1.19.1/dist/locale/bootstrap-table-zh-CN.min.js"></script>
+
 {% endblock %}
-{% block content %}
 
+    <link href="https://unpkg.com/bootstrap-table@1.19.1/dist/bootstrap-table.min.css" rel="stylesheet">
 
-    <form class="form-inline">
-        <div class="form-group">
-          <label for="files">Upload a CSV formatted file:</label>
-          <input type="file" id="files"  class="form-control" accept=".csv" required />
-        </div>
-        <div class="form-group">
-         <button type="submit" id="submit-file" class="btn btn-primary">Upload File</button>
-         </div>
-    </form>
+    <script src="https://unpkg.com/bootstrap-table@1.19.1/dist/bootstrap-table.min.js"></script>
+
+    <table id="table">
+      <thead>
+        <tr>
+          <th data-field="value1">Value1</th>
+          <th data-field="value2">Value2</th>
+          <th data-field="operation">Operation</th>
+          <th data-field="result">Result</th>
+        </tr>
+      </thead>
+    </table>
+
+    <script>
+        const $table = $('#table');
+
+        $(function() {
+            const data = [
+                {
+                    'id': 0,
+                    'name': 'Item 0',
+                    'price': '$0'
+                },
+                {
+                    'id': 1,
+                    'name': 'Item 1',
+                    'price': '$1'
+                },
+                {
+                    'id': 2,
+                    'name': 'Item 2',
+                    'price': '$2'
+                },
+                {
+                    'id': 3,
+                    'name': 'Item 3',
+                    'price': '$3'
+                },
+                {
+                    'id': 4,
+                    'name': 'Item 4',
+                    'price': '$4'
+                },
+                {
+                    'id': 5,
+                    'name': 'Item 5',
+                    'price': '$5'
+                }
+            ];
+            $table.bootstrapTable({data: data})
+      })
+    </script>

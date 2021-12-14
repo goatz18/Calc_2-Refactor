@@ -4,6 +4,7 @@
     {{ super() }}
     <style type="text/css">
         .important { color: #336699; }
+        body { background: rgba(255, 187, 51, 0.41) !important; }
     </style>
 {% endblock %}
 
@@ -22,13 +23,25 @@
         {% endwith %}
     </div>
 
-    <div class="container container-fluid flow">
-        <div class="justify-content-md-center">
-            <div class="col">
-                <h1>Project 3</h1>
+    <div class="container container-fluid flow my-5">
+        <div class="row row-cols-3">
+            <div class="col text-center">
+                <span class="project_title align-text-top">Project 3</span>
             </div>
-            <div class="col-sm-3 p-5 p-1 my-5 my-1 bg-light bg-opacity-50 text-light info shadow-lg rounded">
-                <img alt="calculator" src="{{ url_for('static', filename='images/sample_calc.png') }}" class="opacity-75 rounded mx-auto d-block img-fluid" style="max-width: 100%; height: auto">
+            <div class="col">
+                <span>Test</span>
+            </div>
+            <div class="col">
+                <span>Test</span>
+            </div>
+            <div class="col p-5 p-1 my-5 my-1 info shadow-lg rounded" style="background: rgba(255, 187, 51, 0.25) !important;">
+                <span><img alt="calculator" src="{{ url_for('static', filename='images/sample_calc2.png') }}" class="opacity-75 rounded mx-auto d-block img-fluid" style="max-width: 100%; height: auto"></span>
+            </div>
+            <div class="col">
+                <span>Test</span>
+            </div>
+            <div class="col">
+                <span>Test</span>
             </div>
         </div>
     </div>

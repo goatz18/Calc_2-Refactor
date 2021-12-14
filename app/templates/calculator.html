@@ -22,44 +22,46 @@
         </div>
      {% endif %}
 
-  <div class="col-sm-3 mx-auto p-5 p-1 my-4 bg-warning bg-opacity-50 text-light info shadow-lg rounded">
-    <div class="container-fluid py-2">
-        <div class="d-flex justify-content-center">
+    <div class="col-sm-3 mx-auto p-5 p-1 my-4 bg-warning bg-opacity-50 text-light info shadow-lg rounded">
+        <div class="container-fluid py-2">
+            <div class="d-flex justify-content-center">
 
-            <span class="border border-light rounded p-5 p-3 my-4 bg-primary bg-opacity-75 text-white shadow-lg ">
+                <span class="border border-light rounded p-5 p-3 my-4 bg-primary bg-opacity-75 text-white shadow-lg ">
+                    <form action="/calculator" method="POST">
 
-            <form action="/calculator" method="POST">
-                <label for="value1" class="p-1">Input Value 1:</label><br>
-                <input type="text" id="value1" name="value1" value="1"><br>
-                <label for="value2" class="p-1">Input Value 2:</label><br>
-                <input type="text" id="value2" name="value2" value="2"><br>
-                <fieldset class="pb-2">
-                <legend class="p-1">Choose Operation</legend>
-                  <div class="col-md-9 offset-md-1">
-                    <input type="radio" name="operation" id="addition" value="addition" checked>
-                    <label for="addition">Addition</label>
-                  </div>
-                  <div class="col-md-9 offset-md-1">
-                    <input type="radio" name="operation" id="subtraction" value="subtraction">
-                    <label for="subtraction">Subtraction</label>
-                  </div>
-                  <div class="col-md-9 offset-md-1">
-                    <input type="radio" name="operation" id="multiplication" value="multiplication">
-                    <label for="multiplication">Multiplication</label>
-                  </div>
-                  <div class="col-md-9 offset-md-1">
-                    <input type="radio" name="operation" id="division" value="division">
-                    <label for="division">Division</label>
-                  </div>
-                </fieldset>
+                        <label for="value1" class="p-1">Input Value 1:</label><br>
+                        <input type="text" id="value1" name="value1" value="1"><br>
+                        <label for="value2" class="p-1">Input Value 2:</label><br>
+                        <input type="text" id="value2" name="value2" value="2"><br>
 
-                <input class="p-1 col-md-9 offset-md-1" type="submit" value="Submit">
-            </form>
+                            <fieldset class="pb-2">
 
-            </span>
+                                <legend class="p-1">Choose Operation</legend>
+                                    <div class="col-md-9 offset-md-1">
+                                        <input type="radio" name="operation" id="addition" value="addition" checked>
+                                        <label for="addition">Addition</label>
+                                    </div>
+                                    <div class="col-md-9 offset-md-1">
+                                        <input type="radio" name="operation" id="subtraction" value="subtraction">
+                                        <label for="subtraction">Subtraction</label>
+                                    </div>
+                                    <div class="col-md-9 offset-md-1">
+                                        <input type="radio" name="operation" id="multiplication" value="multiplication">
+                                        <label for="multiplication">Multiplication</label>
+                                    </div>
+                                    <div class="col-md-9 offset-md-1">
+                                        <input type="radio" name="operation" id="division" value="division">
+                                        <label for="division">Division</label>
+                                    </div>
+                            </fieldset>
 
+                        <input class="p-1 col-md-9 offset-md-1" type="submit" value="Submit">
+
+                    </form>
+                </span>
+
+            </div>
         </div>
     </div>
-  </div>
 
 {% endblock %}

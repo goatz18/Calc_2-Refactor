@@ -1,6 +1,5 @@
 body {
     font-size: 200%;
-
 }
 .navbar-brand {
     font-size: 1.3em;
@@ -15,9 +14,8 @@ body {
 .nav-item {
     padding-left: 10px;
     padding-right: 10px;
-
 }
-.nav-link {
+.nav-link, a:visited, a  {
     font-size: 1.2em;
     font-family: 'Bebas Neue', cursive;
 }

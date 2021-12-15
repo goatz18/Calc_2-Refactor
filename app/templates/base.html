@@ -22,7 +22,7 @@
 <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-warning bg-opacity-50" style="padding: 10px">
 
-        <a class="nav-link" href="/">
+        <a class="navbar-brand px-2" href="/">
             <img src="{{ url_for('static', filename='images/sample_new.png') }}" width="89" height="40" alt="sample">
         </a>
 
@@ -50,6 +50,9 @@
                 <li class="nav-item">
                     <a class="nav-link" href="oopselect">S.O.L.I.D.</a>
                 </li>
+                <li class="nav-item opacity-0">
+                    # hehehe
+                </li>
             </ul>
         </div>
 
@@ -63,7 +66,7 @@
             integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
             crossorigin="anonymous"></script>
 
-    <div id="footer" class="d-flex justify-content-center">
+    <div id="footer" class="d-flex justify-content-center h5" style="font-family: 'Permanent Marker', cursive;">
         {% block footer %}
             &copy; Copyright 2021 by&nbsp;<a href="https://github.com/goatz18/Calc_2-Refactor.git" rel="nofollow" title="Jason W. Guerrieri Github">Jason W. Guerrieri</a>.
         {% endblock %}

@@ -10,21 +10,25 @@
 
 {% block content %}
 
-    <div class="d-flex justify-content-center pt-4">
-        <h1>Calculator 5000</h1>
-    </div>
-
      {% if error %}
         <div class="alert alert-danger error" role="alert">
              {{ error }}
         </div>
      {% endif %}
 
+    <br>
+
+    <div class="d-flex justify-content-center pt-4">
+        <span class="project_title">WebCalc 5000!</span>
+    </div>
+
+    <br><br>
+
     <div class="col-sm-3 mx-auto p-5 p-1 my-4 bg-warning bg-opacity-25 text-light info shadow-lg rounded">
         <div class="container-fluid py-2">
-            <div class="d-flex justify-content-center">
+            <div class="d-flex justify-content-center opacity-75">
 
-                <span class="border border-light rounded p-5 p-3 my-4 bg-primary bg-opacity-75 text-white shadow-lg ">
+                <span class="rounded p-5 p-3 my-4 text-black bg-secondary shadow-lg" style="font-family: 'Permanent Marker', cursive;">
                     <form action="/calculator" method="POST">
 
                         <label for="value1" class="p-1">Input Value 1:</label><br>
@@ -61,5 +65,7 @@
             </div>
         </div>
     </div>
+
+    <br><br><br>
 
 {% endblock %}

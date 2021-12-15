@@ -23,27 +23,49 @@
         {% endwith %}
     </div>
 
-    <div class="container container-fluid flow my-5">
-        <div class="row row-cols-3">
-            <div class="col text-center">
+    <div class="container container-fluid flow my-5 flex-md-column-reverse">
+        <div class="row row-cols-5 justify-content-center align-items-center">
+            <div class="col-sm-3 text-center">
+                <span class="project_title align-text-top">Project 1</span>
+            </div>
+                            <div class="col-auto"></div>
+            <div class="col-sm-3 text-center">
+                <span class="project_title align-text-top">Project 2</span>
+            </div>
+                            <div class="col-auto"></div>
+            <div class="col-sm-3 text-center">
                 <span class="project_title align-text-top">Project 3</span>
             </div>
-            <div class="col">
-                <span>Test</span>
+        </div>
+
+        <div class="row row-cols-5 justify-content-center align-items-center">
+            <div class="col-sm-3 text-center">
+                <span class="sub_title align-middle">History of the Internet!</span>
             </div>
-            <div class="col">
-                <span>Test</span>
+                            <div class="col-auto"></div>
+            <div class="col-sm-3 text-center">
+                <span class="sub_title align-middle">Easy Python Tips</span>
             </div>
-            <div class="col p-5 p-1 my-5 my-1 info shadow-lg rounded" style="background: rgba(255, 187, 51, 0.25) !important;">
-                <span><img alt="calculator" src="{{ url_for('static', filename='images/sample_calc2.png') }}" class="opacity-75 rounded mx-auto d-block img-fluid" style="max-width: 100%; height: auto"></span>
-            </div>
-            <div class="col">
-                <span>Test</span>
-            </div>
-            <div class="col">
-                <span>Test</span>
+                            <div class="col-auto"></div>
+            <div class="col-sm-3 text-center">
+                <span class="sub_title align-middle">WebCalc 5000!</span>
             </div>
         </div>
+
+        <div class="row row-cols-5 justify-content-center align-items-center">
+            <div class="col-md-3 p-5 p-1 my-5 my-1 info shadow-lg rounded" style="background: rgba(255, 187, 51, 0.25) !important;">
+                <span><a href="https://goatz18.github.io/internet-history/public_html/index.html"><img alt="mac" src="{{ url_for('static', filename='images/interneths.jpg') }}" class="opacity-75 rounded mx-auto d-block img-fluid" style="max-width: 100%; height: auto"></a></span>
+            </div>
+                            <div class="col-auto"></div>
+            <div class="col-md-3 p-5 p-1 my-5 my-1 info shadow-lg rounded" style="background: rgba(255, 187, 51, 0.25) !important;">
+                <span><a href="oopoop"><img alt="python" src="{{ url_for('static', filename='images/python.jpg') }}" class="opacity-75 rounded mx-auto my-5 d-block img-fluid" style="max-width: 100%; height: auto"></a></span>
+            </div>
+                            <div class="col-auto"></div>
+            <div class="col-md-3 p-5 p-1 my-5 my-1 info shadow-lg rounded" style="background: rgba(255, 187, 51, 0.25) !important;">
+                <span><a href="calculator"><img alt="calculator" src="{{ url_for('static', filename='images/sample_calc2.png') }}" class="opacity-75 rounded mx-auto d-block img-fluid" style="max-width: 100%; height: auto"></a></span>
+            </div>
+        </div>
+
     </div>
 
     <br><br>

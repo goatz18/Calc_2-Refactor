@@ -25,3 +25,8 @@ class OopSelect(ControllerBase):
     @staticmethod
     def get():
         return render_template('oopselect.html')
+
+class TestController(ControllerBase):
+    @staticmethod
+    def get():
+        return render_template('test.html')

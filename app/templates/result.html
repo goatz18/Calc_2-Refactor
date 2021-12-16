@@ -10,13 +10,7 @@
 
 {% block content %}
 
-    <br><br>
-    <div class="row text-center text-black">
-        <span class="project_title">Calculation Result</span>
-    </div>
-    <br><br>
-
-        <div class="container-fluid" style="min-height: 100%; width: 40%">
+    <div class="container-fluid" style="min-height: 100%; width: 40%">
         {% with messages = get_flashed_messages() %}
             {% if messages %}
                 {% for message in messages %}
@@ -26,7 +20,13 @@
                 {% endfor %}
             {% endif %}
         {% endwith %}
-        </div>
+    </div>
+
+    <br>
+    <div class="row text-center text-black">
+        <span class="project_title">Calculation Result</span>
+    </div>
+    <br><br>
 
     <div class="container-fluid" style="min-height: 100%; width: 40%">
         <table class="table table-hover table-bordered table-light table-striped">
@@ -44,6 +44,13 @@
             </tr>
         </table>
     </div>
+
+    <br>
+    <div class="row text-center text-black">
+        <span><a href="calculator"><img alt="another" src="{{ url_for('static', filename='images/make_another.png') }}" class="opacity-75 rounded mx-auto d-block img-fluid" style="max-width: 100%; height: auto"></a></span>
+    </div>
+    <br><br>
+
 
 {% endblock %}
 

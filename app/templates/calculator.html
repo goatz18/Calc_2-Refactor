@@ -10,19 +10,21 @@
 
 {% block content %}
 
-     {% if error %}
-        <div class="alert alert-danger error" role="alert">
-             {{ error }}
-        </div>
-     {% endif %}
-
     <br>
 
     <div class="d-flex justify-content-center pt-4">
         <span class="project_title">WebCalc 5000!</span>
     </div>
 
-    <br><br>
+    <br>
+
+    <div>
+         {% if error %}
+            <div class="alert alert-danger error container-fluid" style="min-height: 100%; width: 40%" role="alert">
+                 {{ error }}
+            </div>
+         {% endif %}
+    </div>
 
     <div class="col-sm-3 mx-auto p-5 p-1 my-4 bg-warning bg-opacity-25 text-light info shadow-lg rounded">
         <div class="container-fluid py-2">
@@ -31,9 +33,9 @@
                 <span class="rounded p-5 p-3 my-4 text-black bg-secondary shadow-lg" style="font-family: 'Permanent Marker', cursive;">
                     <form action="/calculator" method="POST">
 
-                        <label for="value1" class="p-1">Input Value 1:</label><br>
+                        <label for="value1" class="p-1 h5">Input Value 1:</label><br>
                         <input type="text" id="value1" name="value1" value="1"><br>
-                        <label for="value2" class="p-1">Input Value 2:</label><br>
+                        <label for="value2" class="p-1 h5">Input Value 2:</label><br>
                         <input type="text" id="value2" name="value2" value="2"><br>
 
                             <fieldset class="pb-2">

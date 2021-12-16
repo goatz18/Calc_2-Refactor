@@ -5,6 +5,7 @@ from app.controllers.index_controller import BehindTheWebController
 from app.controllers.index_controller import SearchEngineWarsController
 from app.controllers.index_controller import OopOopController
 from app.controllers.index_controller import OopSelect
+from app.controllers.index_controller import TestController
 from app.controllers.calculator_controller import CalculatorController
 from werkzeug.debug import DebuggedApplication
 
@@ -42,6 +43,10 @@ def oopoop_get():
 @app.route("/oopselect", methods=['GET'])
 def oopselect_get():
     return OopSelect.get()
+
+@app.route("/test", methods=['GET'])
+def test_get():
+    return TestController.get()
 
 #@app.route("/calculator")
 #def divide_by_zero():

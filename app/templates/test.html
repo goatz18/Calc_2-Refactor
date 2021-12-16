@@ -26,10 +26,10 @@
     <!-- Title Card -->
     <div class="jumbotron-fluid container text-center my-5">
           <div class="row">
-               <span class="project_title">Object Oriented Programming</span>
+               <span class="project_title">S.O.L.I.D.</span>
           </div>
          <div class="row">
-            <span class="sub_title">Principles: Calculator Program Examples</span>
+            <span class="sub_title">S.O.L.I.D. Principles in Calculator</span>
          </div>
     </div>
 
@@ -44,31 +44,31 @@
                     <span class="sub_title">Fundamental Concepts</span>
                 </div>
                 <div class="text-center">
-                    <span class="middle_title">Encapsulation</span>
+                    <span class="middle_title">1. Single Responsibility Principle</span>
                 </div>
                 <div class="m-2">
-                    <span class="ordinary_type">Encapsulation describes the idea of wrapping data and all the methods that work on said data, within one unit.</span>
+                    <span class="ordinary_type">The Single Responsibility Principle requires that a class should have only one job. So if a class has more than one responsibility, it becomes coupled. A change to one responsibility results to modification of the other responsibility.</span>
                 </div>
 
                 <div class="text-center" style="margin-bottom: 5px">
-                    <span class="middle_title">Inheritance</span><br>
+                    <span class="middle_title">2. Open-Closed Principle</span><br>
                 </div>
                 <div class="m-2">
-                    <span class="ordinary_type">Inheritance is the capability of one class to derive or inherit properties from another class.</span>
+                    <span class="ordinary_type">Software entities such as Classes, modules, and functions should be open for extension, not modification.</span>
                 </div>
 
                 <div class="text-center" style="margin-bottom: 5px">
-                    <span class="middle_title">Polymorphism</span><br>
+                    <span class="middle_title">3. Liskov Substitution Principle</span><br>
                 </div>
                 <div class="m-2">
-                    <span class="ordinary_type">Polymorphism the word means having many forms. In programming, polymorphism means having the same function name (but different signatures) being used for different types.</span>
+                    <span class="ordinary_type">The main idea behind Liskov Subtitution Principle is that, for any class, a client should be able to use any of its subtypes indistinguishably, without even noticing, and therefore without compromising the expected behavior at runtime. This means that clients are completely isolated and unaware of changes in the class hierarchy.</span>
                 </div>
 
                 <div class="text-center" style="margin-bottom: 5px">
-                    <span class="middle_title">Abstraction</span><br>
+                    <span class="middle_title">4. Interface Segregation Principle</span><br>
                 </div>
                 <div class="m-2">
-                    <span class="ordinary_type">Abstract classes can be considered as blueprints for other classes. It allows a set of methods to be created within child classes that are built from the abstract class. A class with one or more abstract methods is an abstract class.</span>
+                    <span class="ordinary_type">Make fine grained interfaces that are client specific Clients should not be forced to depend upon interfaces that they do not use. This principle deals with the disadvantages of implementing big interfaces.</span>
                 </div>
 
             </div>
@@ -77,35 +77,21 @@
             <div class="col-8">
 
                 <div class="mx-4 my-2 text-left" style="margin-top: 5px">
-                    <span class="sub_title">Encapsulation</span>
+                    <span class="sub_title">1. Single Responsibility Principle</span>
                 </div>
                 <div class="mx-4 my-2">
-                    <span class="middle_title">Protected Members</span>
+                    <span class="middle_title">Calculator Example</span>
                 </div>
                 <div class="mx-4 my-3">
-                    <span class="ordinary_type">Protected members are the members of a class that exist and can only be accessed only from within a certain class and it's subclasses. In Python, this is accomplished by following a convention of prefixing the name of the member by a single underscore "_".</span>
+                    <span class="ordinary_type">Here is an example of how the job of the class "Calculation" doesn't actually do any calculating as it merely acquires a list of float values first, and then the separate classes for computing have their own individual classes. The calculation class could do both find float values and perform calculations, but that would violate the Single Responsibility Principle. For example here are also the "Addition" and "Subtraction" classes that all accomplish only one job, all seen below.</span>
                 </div>
 
-                <div class="mx-4 my-3">
-                    <span class="sub_title">Private Members</span>
-                </div>
-                <div class="mx-4 my-3">
-                    <span class="ordinary_type">Private members, although similar to protected members, differ in that they are neither accessed outside of their class nor by any base class. In Python, private members can only be accessed inside of a class. Private memebers are defined by a prefix of a double underscore "__".</span>
-                </div>
-                <div class="mx-4 my-3">
-                    <span class="ordinary_type">This is accomplished in the calculator program as shown below. The values used to perform calculations are getting run through a constructor under "__init__", which then uses a "staticmethod" and returns all values back as float values.</span>
+                <div class="py-5">
+                    <img alt="encapsulation" src="{{ url_for('static', filename='images/calculation.png') }}" class="img-fluid p-2 py-5 w-75 rounded mx-auto d-block">
+                    <img alt="encapsulation" src="{{ url_for('static', filename='images/inheritancesub.png') }}" class="img-fluid p-2 py-5 w-75 rounded mx-auto d-block">
+                    <img alt="encapsulation" src="{{ url_for('static', filename='images/polymorphism.png') }}" class="img-fluid p-2 py-5 w-75 rounded mx-auto d-block">
                 </div>
 
-                <div class="mx-4 my-3">
-                    <span class="sub_title">Overture.com</span>
-                </div>
-                <div class="mx-4 my-3">
-                    <span class="middle_title">Who Needs Banner Ads</span>
-                </div>
-                <div class="mx-4 my-3">
-                    <span class="ordinary_type">Overture.com was the first to introduce targeted ad results and to sell ad space to companies in order to get their results to be higher on the list of certain keyword searches.</span>
-                </div>
-                <img alt="atomic" src="{{ url_for('static', filename='images/atomic.jpg') }}" class="opacity-75 rounded mx-auto d-block img-fluid" style="max-width: 100%; height: auto">
             </div>
 
         </div>
@@ -115,7 +101,7 @@
     <!-- Break Title -->
     <div class="container justify-content-center text-center post_it">
         <div class="row">
-            <span class="project_title">Fight for Search Round 2</span>
+            <span class="project_title">2. Open-Closed Principle</span>
         </div>
     </div>
 
@@ -123,28 +109,96 @@
     <div class="container">
         <div class="row mx-1">
             <div class="my-2 text-left" style="padding-top: 15px">
-                <span class="sub_title">February 7, 1958</span>
+                <span class="sub_title">Calculator Example</span>
             </div>
             <div class="my-2">
-                <span class="middle_title">Google Refuses Banner Ads</span>
+                <span class="ordinary_type">For this principle, our example from above also happens to apply. Instead of adding simple if statements to the "Calculation" class, for example.</span>
             </div>
             <div class="my-2">
-                <span class="ordinary_type">Google insists on keeping it's page simple, and banner free. It's search engine based on link usefulness is innovative, but they need a way to generate revenue. Venture capitalists investing in Google apply pressure to find a revenue source.</span>
+                <span class="ordinary_type">if self.calculation == 'addition'<br>
+                return self.value + a</span>
+            </div>
+            <div class="my-2 py-3">
+                <span class="ordinary_type">We instead create separate classes that extend Calculation, such as "Addition(Calculation)" and "Subtraction(Calculation)" to implement the new behavior.</span>
             </div>
 
-            <div class="my-2">
-                <span class="sub_title">Can A Deal Be Made</span>
+        </div>
+    </div>
+
+    <!-- Break Title -->
+    <div class="container justify-content-center text-center post_it">
+        <div class="row">
+            <span class="project_title">3. Liskov Substitution Principle</span>
+        </div>
+    </div>
+
+    <!-- Secondary content container -->
+    <div class="container">
+        <div class="row mx-1">
+            <div class="my-2 text-left" style="padding-top: 15px">
+                <span class="sub_title">Calculator Example</span>
             </div>
             <div class="my-2">
-                <span class="ordinary_type">Google and Overture.com are brought together to make a deal. It's not truly known what happens, but nothing comes of it. Although, Google does go ahead with it's own targeted ad results engine which effectively copies Overture.com. Overture then sues Google and wins an unknown settlement. Overture.com founder Bill Gross obtains an undisclosed amount of Google stock.</span>
+                <span class="ordinary_type">In the class "Calculations" we get the history of calculations and is a great example of the Liskov Substitution Principle, as all specializations of the class are suitable by the parent or superclass.</span>
             </div>
 
-            <div class="my-2">
-                <span class="sub_title">Google IPO To The Moon</span>
+            <br>
+            <img alt="encapsulation" src="{{ url_for('static', filename='images/3liskov.png') }}" class="img-fluid p-2 py-5 w-75 rounded mx-auto d-block">
+
+        </div>
+    </div>
+
+    <!-- Break Title -->
+    <div class="container justify-content-center text-center post_it">
+        <div class="row">
+            <span class="project_title">4. Interface Segregation Principle</span>
+        </div>
+    </div>
+
+    <!-- Secondary content container -->
+    <div class="container">
+        <div class="row mx-1">
+            <div class="my-2 text-left" style="padding-top: 15px">
+                <span class="sub_title">Calculator Example</span>
             </div>
             <div class="my-2">
-                <span class="ordinary_type">Google launches it's IPO in 2004, after the dot com bubble and still does well. The stock remained a high growth stock up to even today. Their combination of keyword, link popularity, and targeted ad results, have allowed them to expand into the juggernaut of today.</span>
+                <span class="ordinary_type">In this example you can see here that the "Calculator" class provides us with our core interface segregations, resulting in loose coupling and easy testing.</span>
             </div>
+
+            <br>
+            <img alt="encapsulation" src="{{ url_for('static', filename='images/4interface.png') }}" class="img-fluid p-2 py-5 w-75 rounded mx-auto d-block">
+
+        </div>
+    </div>
+
+    <!-- Break Title -->
+    <div class="container justify-content-center text-center post_it">
+        <div class="row">
+            <span class="project_title">5. Dependency Inversion Principle</span>
+        </div>
+    </div>
+
+    <!-- Secondary content container -->
+    <div class="container">
+        <div class="row mx-1">
+            <div class="my-2 text-left" style="padding-top: 15px">
+                <span class="sub_title">Calculator Example</span>
+            </div>
+            <div class="my-2">
+                <span class="ordinary_type">For this example we go back to the "Calculator" class, low level, that generates float values, and the many actual calculation classes, high level, such as "Addition" and "Subtraction". They don't depend on themselves, but they do depend on abstractions. The client simply enacts the calculator and gets a result.</span>
+            </div>
+
+            <br>
+            <img alt="encapsulation" src="{{ url_for('static', filename='images/calculation.png') }}" class="img-fluid p-2 py-5 w-75 rounded mx-auto d-block">
+            <br>
+
+            <br>
+            <img alt="encapsulation" src="{{ url_for('static', filename='images/inheritancesub.png') }}" class="img-fluid p-2 py-5 w-75 rounded mx-auto d-block">
+            <br>
+
+            <br>
+            <img alt="encapsulation" src="{{ url_for('static', filename='images/polymorphism.png') }}" class="img-fluid p-2 py-5 w-75 rounded mx-auto d-block">
+
         </div>
     </div>
 

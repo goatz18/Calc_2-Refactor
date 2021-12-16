@@ -1,3 +1,43 @@
 body {
-font-size: 200%;
+    font-size: 200%;
+}
+.navbar a {
+    font-size: 1.2em;
+    width: auto;
+    height: 57px;
+}
+.nav-item {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.nav-link {
+    font-size: 1.2em;
+    font-family: 'Bebas Neue', cursive;
+}
+.navbar-nav {
+    padding-left: 10px;
+    font-size: 1.4em;
+}
+.project_title {
+    font-size: 60px;
+    font-family: 'Permanent Marker', cursive;
+}
+.sub_title {
+    font-size: 41px;
+    font-family: 'Permanent Marker', cursive;
+}
+.middle_title {
+    font-size: 33px;
+    font-family: 'Permanent Marker', cursive;
+}
+.calculator {
+    background: rgba(250, 220, 135, 0.05) !important;
+}
+.ordinary_type {
+    font-size: 28px;
+    font-family: 'Permanent Marker', cursive;
+    color: rgba(0, 0, 0, 1) !important;
+}
+.post_it {
+    background: rgba(255, 187, 51, 0.25) !important;
 }

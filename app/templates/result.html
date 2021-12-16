@@ -4,22 +4,53 @@
     {{ super() }}
     <style type="text/css">
         .important { color: #336699; }
+        body { background: rgba(255, 187, 51, 0.41) !important; }
     </style>
 {% endblock %}
+
 {% block content %}
-    <h1 class="important">Calculation Result</h1>
-    {% with messages = get_flashed_messages() %}
-    {% if messages %}
-        {% for message in messages %}
-            <div class="alert alert-success" role="alert">
-                {{ message }}
-            </div>
-        {% endfor %}
-    {% endif %}
-{% endwith %}
-    <strong>Value 1: </strong> {{ value1 }} <br>
-    <strong>Value 2: </strong> {{ value2 }} <br>
-    <strong>Operation: </strong> {{ operation }} <br>
-    <strong>Result: </strong> {{ result }}
+
+    <div class="container-fluid" style="min-height: 100%; width: 40%">
+        {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                {% for message in messages %}
+                    <div class="alert alert-success alert=dismissible h5 text-center" role="alert">
+                        {{ message }}
+                    </div>
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
+    </div>
+
+    <br>
+    <div class="row text-center text-black">
+        <span class="project_title">Calculation Result</span>
+    </div>
+    <br><br>
+
+    <div class="container-fluid" style="min-height: 100%; width: 40%">
+        <table class="table table-hover table-bordered table-light table-striped">
+            <tr>
+                <th>Value 1</th>
+                <th>Value 2</th>
+                <th>Operation</th>
+                <th>Result</th>
+            </tr>
+            <tr>
+                <td>{{ value1 }}</td>
+                <td>{{ value2 }}</td>
+                <td>{{ operation }}</td>
+                <td>{{ result }}</td>
+            </tr>
+        </table>
+    </div>
+
+    <br>
+    <div class="row text-center text-black">
+        <span><a href="calculator"><img alt="another" src="{{ url_for('static', filename='images/make_another.png') }}" class="opacity-75 rounded mx-auto d-block img-fluid" style="max-width: 100%; height: auto"></a></span>
+    </div>
+    <br><br>
+
 
 {% endblock %}
+

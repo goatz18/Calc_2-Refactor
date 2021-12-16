@@ -4,57 +4,70 @@
     {{ super() }}
     <style type="text/css">
         .important { color: #336699; }
+        body { background: rgba(255, 187, 51, 0.41) !important; }
     </style>
-
 {% endblock %}
+
 {% block content %}
 
     <div class="container" style="min-height: 100%;  width: 80%">
-    {% with messages = get_flashed_messages() %}
-      {% if messages %}
-        {% for message in messages %}
-          <div class="alert alert-info alert-success" role="alert">
-            {{ message }}
-          <button type="button" class="close" style="float: right" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-          </div>
-        {% endfor %}
-      {% endif %}
-    {% endwith %}
-    {% block body %}{% endblock %}
+        {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                {% for message in messages %}
+                    <div class="alert alert-info alert-success" role="alert">
+                    {{ message }}
+                    <button type="button" class="close" style="float: right" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    </div>
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
     </div>
 
-    <h1>Jinja2 Calculator</h1>
-    <p class="important">
-      Welcome to my awesome homepage brah.
-        <img alt="sample" src="{{ url_for('static', filename='images/sample.jpeg') }}">
-    </p>
+    <div class="container container-fluid flow my-5 flex-md-column-reverse">
+        <div class="row row-cols-5 justify-content-center align-items-center">
+            <div class="col-sm-3 text-center">
+                <span class="project_title align-text-top">Project 1</span>
+            </div>
+                            <div class="col-auto"></div>
+            <div class="col-sm-3 text-center">
+                <span class="project_title align-text-top">Project 2</span>
+            </div>
+                            <div class="col-auto"></div>
+            <div class="col-sm-3 text-center">
+                <span class="project_title align-text-top">Project 3</span>
+            </div>
+        </div>
 
-    <form action="/calculator" method="POST">
-        <label for="value1" class="col-sm-2 col-form-label">Value 1:</label><br>
-        <input type="text" id="value1" name="value1" value="1"><br>
-        <label for="value2" class="col-sm-2 col-form-label">Value 2:</label><br>
-        <input type="text" id="value2" name="value2" value="2"><br>
-        <fieldset>
-        <legend>Operation</legend>
-          <div>
-            <input type="radio" name="operation" id="addition" value="addition" checked>
-            <label for="addition">addition</label>
-          </div>
-          <div>
-            <input type="radio" name="operation" id="subtraction" value="subtraction">
-            <label for="subtraction">subtraction</label>
-          </div>
-          <div>
-            <input type="radio" name="operation" id="multiplication" value="multiplication">
-            <label for="multiplication">multiplication</label>
-          </div>
-          <div>
-            <input type="radio" name="operation" id="division" value="division">
-            <label for="division">division</label>
-          </div>
-        </fieldset>
+        <div class="row row-cols-5 justify-content-center align-items-center">
+            <div class="col-sm-3 text-center">
+                <span class="sub_title align-middle">History of the Internet!</span>
+            </div>
+                            <div class="col-auto"></div>
+            <div class="col-sm-3 text-center">
+                <span class="sub_title align-middle">Easy Python Tips</span>
+            </div>
+                            <div class="col-auto"></div>
+            <div class="col-sm-3 text-center">
+                <span class="sub_title align-middle">WebCalc 5000!</span>
+            </div>
+        </div>
 
-        <input type="submit" value="Submit">
-    </form>
+        <div class="row row-cols-5 justify-content-center align-items-center">
+            <div class="col-md-3 p-5 p-1 my-5 my-1 info shadow-lg rounded" style="background: rgba(255, 187, 51, 0.25) !important;">
+                <span><a href="https://goatz18.github.io/internet-history/public_html/index.html"><img alt="mac" src="{{ url_for('static', filename='images/interneths.jpg') }}" class="opacity-75 rounded mx-auto d-block img-fluid" style="max-width: 100%; height: auto"></a></span>
+            </div>
+                            <div class="col-auto"></div>
+            <div class="col-md-3 p-5 p-1 my-5 my-1 info shadow-lg rounded" style="background: rgba(255, 187, 51, 0.25) !important;">
+                <span><a href="oopoop"><img alt="python" src="{{ url_for('static', filename='images/python.jpg') }}" class="opacity-75 rounded mx-auto my-5 d-block img-fluid" style="max-width: 100%; height: auto"></a></span>
+            </div>
+                            <div class="col-auto"></div>
+            <div class="col-md-3 p-5 p-1 my-5 my-1 info shadow-lg rounded" style="background: rgba(255, 187, 51, 0.25) !important;">
+                <span><a href="calculator"><img alt="calculator" src="{{ url_for('static', filename='images/sample_calc2.png') }}" class="opacity-75 rounded mx-auto d-block img-fluid" style="max-width: 100%; height: auto"></a></span>
+            </div>
+        </div>
+
+    </div>
+
+    <br><br>
 
 {% endblock %}

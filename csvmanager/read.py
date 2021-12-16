@@ -1,8 +1,12 @@
-import os
+import os.path
 
 import pandas as pd
 
+
 class Read:
     @staticmethod
-    def data_frame_from_csv_file(filename):
-        return pd.read_csv(os.path.abspath(filename))
+    def read_calc_history_from_df(filepath):
+        data = pd.read_csv(os.path.abspath(filepath))
+        data_frame = pd.DataFrame(data, columns=['value_a', 'operator', 'value_b', 'result'])
+        return data_frame
+

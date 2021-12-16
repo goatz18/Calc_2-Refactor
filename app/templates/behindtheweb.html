@@ -1,0 +1,252 @@
+{% extends "base.html" %}
+{% block title %}Index{% endblock %}
+{% block head %}
+    {{ super() }}
+    <style type="text/css">
+        .important { color: #336699; }
+        body { background: rgba(255, 187, 51, 0.41) !important; }
+    </style>
+{% endblock %}
+
+{% block content %}
+
+    <div class="container" style="min-height: 100%;  width: 80%">
+        {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                {% for message in messages %}
+                    <div class="alert alert-info alert-success" role="alert">
+                    {{ message }}
+                    <button type="button" class="close" style="float: right" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    </div>
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
+    </div>
+
+    <!-- Title Card -->
+    <div class="jumbotron-fluid container text-center my-5">
+          <div class="row">
+               <span class="project_title">The Internet</span>
+          </div>
+         <div class="row">
+            <span class="sub_title">Behind the Web</span>
+         </div>
+    </div>
+
+    <!-- Main Container -->
+    <div class="container justify-content-center text-black">
+
+        <div class="row">
+
+            <!-- Side Bar -->
+            <div class="col-4 ordinary_type post_it">
+                <div class="text-center my-2">
+                    <span class="sub_title">What Started It All</span>
+                </div>
+                <div class="text-center">
+                    <span class="middle_title">The Atomic Bomb</span>
+                </div>
+                <div class="m-2">
+                    <img alt="atomic" src="{{ url_for('static', filename='images/atomic.jpg') }}" class="opacity-75 rounded mx-auto d-block img-fluid" style="max-width: 100%; height: auto">
+                </div>
+                <div class="m-2">
+                    <span class="ordinary_type">The threat of atomic warfare threatened to cripple a central communication network with one bomb.</span>
+                </div>
+
+                <div class="text-center" style="margin-bottom: 5px">
+                    <span class="middle_title">Circuit Switching</span><br>
+                </div>
+                <div class="m-2">
+                    <img alt="switchboard" src="{{ url_for('static', filename='images/switchboard.jpg') }}" class="opacity-75 rounded mx-auto d-block img-fluid" style="max-width: 100%; height: auto">
+                </div>
+                <div class="m-2">
+                    <span class="ordinary_type">The use of circuit switching required a central location that would connect multiple points of communication. This flaw lead to the idea of packet switching, and the seed of the world wide web was born.</span>
+                </div>
+            </div>
+
+            <!-- Primary Content -->
+            <div class="col-8">
+                <img alt="switchboard" src="{{ url_for('static', filename='images/darpa.png') }}" class="opacity-75 rounded float-end w-25 p-2 img-fluid" style="max-width: 100%; height: auto">
+                <div class="mx-4 my-2 text-left" style="margin-top: 5px">
+                    <span class="sub_title">February 7, 1958</span>
+                </div>
+                <div class="mx-4 my-2">
+                    <span class="middle_title">President Eisenhower Founds ARPA</span>
+                </div>
+                <div class="mx-4 my-3">
+                    <span class="ordinary_type">The Advanced Research Projects Agency (ARPA), known as DARPA today, was founded after the Soviet Union launched Sputnik 1 in 1957. One of their projects was ARPANET, and it aimed at creating a wide area packet switched network with distributed control, the foundation that the modern internet sits upon.</span>
+                </div>
+
+                <div class="mx-4 my-3">
+                    <span class="sub_title">J.C. Licklider</span>
+                </div>
+                <div class="mx-4 my-3">
+                    <span class="middle_title">The Math Behind The Idea of Modern Packet Switching</span>
+                </div>
+                <div class="mx-4 my-3">
+                    <span class="ordinary_type">A psychologist and computer scientist by trade, it's Licklider who created the framework for the mathematics behind the idea of sending a self certifiable message over a packet switched network. Other members of ARPA and the scientific community, using his initial mathematics, helped get ARPANET off the ground.</span>
+                </div>
+
+                <div class="mx-4 my-3">
+                    <span class="sub_title">Leonard Kleinrock</span>
+                </div>
+                <div class="mx-4 my-3">
+                    <span class="middle_title">Que-ing Theory</span>
+                </div>
+                <div class="mx-4 my-3">
+                    <span class="ordinary_type">Kleinrock's doctoral thesis at MIT was on the mathematics of Que-ing theory, which was crucial to packet switching and formed a basis for how the decentralized "nodes" will communicate over the early ARPANET.</span>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- Break Title -->
+    <div class="container justify-content-center text-center post_it">
+        <div class="row">
+            <span class="project_title">Other ARPANET Key Players</span>
+        </div>
+    </div>
+
+    <!-- Secondary content container -->
+    <div class="container">
+        <div class="row mx-1">
+            <div class="my-2 text-left" style="padding-top: 15px">
+                <span class="sub_title">February 7, 1958</span>
+            </div>
+            <div class="my-2">
+                <span class="middle_title">President Eisenhower Founds ARPA</span>
+            </div>
+            <div class="my-2">
+                <span class="ordinary_type">The Advanced Research Projects Agency (ARPA), known as DARPA today, was founded after the Soviet Union launched Sputnik 1 in 1957. One of their projects was ARPANET, and it aimed at creating a wide area packet switched network with distributed control, the foundation that the modern internet sits upon.</span>
+            </div>
+
+            <div class="my-2">
+                <span class="sub_title">J.C. Licklider</span>
+            </div>
+            <div class="my-2">
+                <span class="middle_title">The Math Behind The Idea of Modern Packet Switching</span>
+            </div>
+            <div class="my-2">
+                <span class="ordinary_type">A psychologist and computer scientist by trade, it's Licklider who created the framework for the mathematics behind the idea of sending a self certifiable message over a packet switched network. Other members of ARPA and the scientific community, using his initial mathematics, helped get ARPANET off the ground.</span>
+            </div>
+
+            <div class="my-2">
+                <span class="sub_title">Leonard Kleinrock</span>
+            </div>
+            <div class="my-2">
+                <span class="middle_title">Que-ing Theory</span>
+            </div>
+            <div class="my-2">
+                <span class="ordinary_type">Kleinrock's doctoral thesis at MIT was on the mathematics of Que-ing theory, which was crucial to packet switching and formed a basis for how the decentralized "nodes" will communicate over the early ARPANET.</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Break Title -->
+    <div class="container justify-content-center text-center post_it">
+        <div class="row">
+            <span class="project_title">June 1, 1969 And Beyond</span>
+        </div>
+    </div>
+
+    <!-- Secondary content container -->
+    <div class="container">
+        <div class="row mx-1">
+            <div class="my-2 text-left" style="padding-top: 15px">
+                <span class="sub_title">Bolt Beranek and Newman (BBN)</span>
+            </div>
+            <div class="my-2">
+                <span class="middle_title">Won the contract to Build the first IMPs</span>
+            </div>
+            <div class="my-2">
+                <span class="ordinary_type">BBN Team Lead Frank Heart and team won the contract to build the ARPANET mainframe IMPs on July 1, 1969. The first IMP was delivered to UCLA and graduate student Stephen Crocker wrote the code for UCLA's computer to communicate with. Later, Bob Metcalf codes MIT's mainframe to communicate with it's IMP.</span>
+            </div>
+            <div class="my-2">
+                <span class="ordinary_type">October 29, 1969 the first message over ARPANET is sent and received.</span>
+            </div>
+
+            <div class="my-2">
+                <span class="sub_title">Raymond Tomlinson</span>
+            </div>
+            <div class="my-2">
+                <span class="middle_title">Inventor of E-Mail: The @ Sign Guy!</span>
+            </div>
+            <div class="my-2">
+                <span class="ordinary_type">In the span of only one year of ARPANET being online, computers are connected, files are sent, and e-mail is invented.</span>
+            </div>
+
+            <div class="my-2">
+                <span class="sub_title">April 1971</span>
+            </div>
+            <div class="my-2">
+                <span class="middle_title">18 mainframe computers are connected to ARPANET.</span>
+            </div>
+            <div class="my-2">
+                <span class="sub_title">1972</span>
+            </div>
+            <div class="my-2">
+                <span class="middle_title">Fewer than 25 computers on ARPANET</span>
+            </div>
+            <div class="my-2">
+                <span class="ordinary_type">The very first International Conference on Computers and Communications is held in October of 1972 in Washington, DC. ARPANET is a big hit and it's future is brought that much closer to the modern internet.</span>
+            </div>
+
+            <div class="my-2">
+                <span class="sub_title">1992</span>
+            </div>
+            <div class="my-2">
+                <span class="middle_title">TCP/IP</span>
+            </div>
+            <div class="my-2">
+                <span class="ordinary_type">Vince Cerf and Bob Kahn invent TCP/IP, which later in 1983 wins out against other internet protocols, and is finally named the official Internet Protocol.</span>
+            </div>
+
+            <!-- Break Title -->
+    <div class="container justify-content-center text-center post_it">
+        <div class="row">
+            <span class="project_title">ARPANET is Set Free</span>
+        </div>
+    </div>
+
+    <!-- Secondary content container -->
+    <div class="container">
+        <div class="row mx-1">
+            <div class="my-2 text-left" style="padding-top: 15px">
+                <span class="sub_title">December 1991</span>
+            </div>
+            <div class="my-2">
+                <span class="middle_title">Congressional Legislature expands ARPANET to the public.</span>
+            </div>
+            <div class="my-2">
+                <span class="ordinary_type">Al Gore introduces a bill that injects $600 million dollars into further expansion of the ARPANET and promotes the innovation that would become the foundational technology advancements leading to the commercial Internet as we know it today.</span>
+            </div>
+
+            <div class="my-2">
+                <span class="sub_title">Tim Berners-Lee</span>
+            </div>
+            <div class="my-2">
+                <span class="middle_title">Invented the World Wide Web</span>
+            </div>
+            <div class="my-2">
+                <span class="ordinary_type">Tim Berners-Lee and his team are invented HTTP and HTML, Hypetext Transfer Protocol and HyperText Markup Language. Both introduce ways for personal computers to view and display internet web pages.</span>
+            </div>
+
+            <div class="my-2">
+                <span class="sub_title">1994</span>
+            </div>
+            <div class="my-2">
+                <span class="middle_title">Birth of the Web Browser</span>
+            </div>
+            <div class="my-2">
+                <span class="ordinary_type">Tim Berners-Lee founds the World Wide Web Project and later the World Wide Web Consortium (W3C) with the aim at unifying standards across the web.</span>
+            </div>
+            <div class="my-2">
+                <span class="ordinary_type">Marc Anderson codes the first web browser called MOSAIC, later known as Netscape. The next chapter of the Internet begins, the Browser Wars.</span>
+            </div>
+
+        </div>
+    </div>
+
+{% endblock %}
